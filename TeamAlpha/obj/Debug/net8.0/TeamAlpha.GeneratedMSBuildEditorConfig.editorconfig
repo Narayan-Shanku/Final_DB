@@ -1,0 +1,185 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = TeamAlpha
+build_property.RootNamespace = TeamAlpha
+build_property.ProjectDir = C:\Users\shankunu\OneDrive - University of Cincinnati\Desktop\TeamAlpha\TeamAlpha\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\shankunu\OneDrive - University of Cincinnati\Desktop\TeamAlpha\TeamAlpha
+build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 8.0
+build_property.EnableCodeStyleSeverity = 
+
+[C:/Users/shankunu/OneDrive - University of Cincinnati/Desktop/TeamAlpha/TeamAlpha/Areas/Identity/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/shankunu/OneDrive - University of Cincinnati/Desktop/TeamAlpha/TeamAlpha/Pages/Contractors/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29udHJhY3RvcnNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/shankunu/OneDrive - University of Cincinnati/Desktop/TeamAlpha/TeamAlpha/Pages/Contractors/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29udHJhY3RvcnNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/shankunu/OneDrive - University of Cincinnati/Desktop/TeamAlpha/TeamAlpha/Pages/Contractors/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29udHJhY3RvcnNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/shankunu/OneDrive - University of Cincinnati/Desktop/TeamAlpha/TeamAlpha/Pages/Contractors/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29udHJhY3RvcnNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/shankunu/OneDrive - University of Cincinnati/Desktop/TeamAlpha/TeamAlpha/Pages/Contractors/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29udHJhY3RvcnNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/shankunu/OneDrive - University of Cincinnati/Desktop/TeamAlpha/TeamAlpha/Pages/Customers/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tZXJzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/shankunu/OneDrive - University of Cincinnati/Desktop/TeamAlpha/TeamAlpha/Pages/Customers/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tZXJzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/shankunu/OneDrive - University of Cincinnati/Desktop/TeamAlpha/TeamAlpha/Pages/Customers/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tZXJzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/shankunu/OneDrive - University of Cincinnati/Desktop/TeamAlpha/TeamAlpha/Pages/Customers/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tZXJzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/shankunu/OneDrive - University of Cincinnati/Desktop/TeamAlpha/TeamAlpha/Pages/Customers/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tZXJzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/shankunu/OneDrive - University of Cincinnati/Desktop/TeamAlpha/TeamAlpha/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/shankunu/OneDrive - University of Cincinnati/Desktop/TeamAlpha/TeamAlpha/Pages/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/shankunu/OneDrive - University of Cincinnati/Desktop/TeamAlpha/TeamAlpha/Pages/Inquiries/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5xdWlyaWVzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/shankunu/OneDrive - University of Cincinnati/Desktop/TeamAlpha/TeamAlpha/Pages/Inquiries/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5xdWlyaWVzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/shankunu/OneDrive - University of Cincinnati/Desktop/TeamAlpha/TeamAlpha/Pages/Inquiries/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5xdWlyaWVzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/shankunu/OneDrive - University of Cincinnati/Desktop/TeamAlpha/TeamAlpha/Pages/Inquiries/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5xdWlyaWVzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/shankunu/OneDrive - University of Cincinnati/Desktop/TeamAlpha/TeamAlpha/Pages/Inquiries/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5xdWlyaWVzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/shankunu/OneDrive - University of Cincinnati/Desktop/TeamAlpha/TeamAlpha/Pages/Phases/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGhhc2VzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/shankunu/OneDrive - University of Cincinnati/Desktop/TeamAlpha/TeamAlpha/Pages/Phases/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGhhc2VzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/shankunu/OneDrive - University of Cincinnati/Desktop/TeamAlpha/TeamAlpha/Pages/Phases/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGhhc2VzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/shankunu/OneDrive - University of Cincinnati/Desktop/TeamAlpha/TeamAlpha/Pages/Phases/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGhhc2VzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/shankunu/OneDrive - University of Cincinnati/Desktop/TeamAlpha/TeamAlpha/Pages/Phases/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGhhc2VzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/shankunu/OneDrive - University of Cincinnati/Desktop/TeamAlpha/TeamAlpha/Pages/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/shankunu/OneDrive - University of Cincinnati/Desktop/TeamAlpha/TeamAlpha/Pages/Projects/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvamVjdHNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/shankunu/OneDrive - University of Cincinnati/Desktop/TeamAlpha/TeamAlpha/Pages/Projects/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvamVjdHNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/shankunu/OneDrive - University of Cincinnati/Desktop/TeamAlpha/TeamAlpha/Pages/Projects/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvamVjdHNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/shankunu/OneDrive - University of Cincinnati/Desktop/TeamAlpha/TeamAlpha/Pages/Projects/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvamVjdHNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/shankunu/OneDrive - University of Cincinnati/Desktop/TeamAlpha/TeamAlpha/Pages/Projects/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvamVjdHNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/shankunu/OneDrive - University of Cincinnati/Desktop/TeamAlpha/TeamAlpha/Pages/Shared/_LoginPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/shankunu/OneDrive - University of Cincinnati/Desktop/TeamAlpha/TeamAlpha/Pages/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/shankunu/OneDrive - University of Cincinnati/Desktop/TeamAlpha/TeamAlpha/Pages/Vendors/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmVuZG9yc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/shankunu/OneDrive - University of Cincinnati/Desktop/TeamAlpha/TeamAlpha/Pages/Vendors/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmVuZG9yc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/shankunu/OneDrive - University of Cincinnati/Desktop/TeamAlpha/TeamAlpha/Pages/Vendors/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmVuZG9yc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/shankunu/OneDrive - University of Cincinnati/Desktop/TeamAlpha/TeamAlpha/Pages/Vendors/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmVuZG9yc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/shankunu/OneDrive - University of Cincinnati/Desktop/TeamAlpha/TeamAlpha/Pages/Vendors/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmVuZG9yc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/shankunu/OneDrive - University of Cincinnati/Desktop/TeamAlpha/TeamAlpha/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/shankunu/OneDrive - University of Cincinnati/Desktop/TeamAlpha/TeamAlpha/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/shankunu/OneDrive - University of Cincinnati/Desktop/TeamAlpha/TeamAlpha/Pages/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-a2peq06cyc
