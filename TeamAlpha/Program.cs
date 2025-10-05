@@ -10,8 +10,9 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(connectionString));
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
-builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true).AddRoles<IdentityRole>()
     .AddEntityFrameworkStores<ApplicationDbContext>();
+
 builder.Services.AddRazorPages();
 
 var app = builder.Build();
@@ -36,5 +37,21 @@ app.UseRouting();
 app.UseAuthorization();
 
 app.MapRazorPages();
+
+using (var scope = app.Services.CreateScope())
+{
+    var RoleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
+    var roles = new[] { "Admin","Manager", "User" };
+    foreach (var role in roles)
+    {
+        var roleExist = await RoleManager.RoleExistsAsync(role);
+        if (!await RoleManager.RoleExistsAsync(role))
+
+        {
+            await RoleManager.CreateAsync(new IdentityRole(role));
+        }
+    }
+    
+}
 
 app.Run();

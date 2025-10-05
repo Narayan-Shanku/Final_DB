@@ -1,0 +1,103 @@
+﻿@page
+@model TeamAlpha.Pages.Inquiries.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Inquiry</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Inquiry.InquiryId" />
+            <div class="form-group">
+                <span class="text-danger">*</span>
+                <label asp-for="Inquiry.Subject" class="control-label"></label>
+                <input asp-for="Inquiry.Subject" class="form-control" />
+                <span asp-validation-for="Inquiry.Subject" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <span class="text-danger">*</span>
+                <label asp-for="Inquiry.Name" class="control-label"></label>
+                <input asp-for="Inquiry.Name" class="form-control" />
+                <span asp-validation-for="Inquiry.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Inquiry.Email" class="control-label"></label>
+                <input asp-for="Inquiry.Email" class="form-control" />
+                <span asp-validation-for="Inquiry.Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Inquiry.Phone" class="control-label"></label>
+                <input asp-for="Inquiry.Phone" class="form-control" />
+                <span asp-validation-for="Inquiry.Phone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <span class="text-danger">*</span>
+                <label asp-for="Inquiry.Message" class="control-label"></label>
+                <input asp-for="Inquiry.Message" class="form-control" />
+                <span asp-validation-for="Inquiry.Message" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Inquiry.CustomerType" class="control-label"></label>
+                <input asp-for="Inquiry.CustomerType" class="form-control" />
+                <span asp-validation-for="Inquiry.CustomerType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Inquiry.ProjectType" class="control-label"></label>
+                <input asp-for="Inquiry.ProjectType" class="form-control" />
+                <span asp-validation-for="Inquiry.ProjectType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Inquiry.AreaSize" class="control-label"></label>
+                <input asp-for="Inquiry.AreaSize" class="form-control" />
+                <span asp-validation-for="Inquiry.AreaSize" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Inquiry.PreferredStyle" class="control-label"></label>
+                <input asp-for="Inquiry.PreferredStyle" class="form-control" />
+                <span asp-validation-for="Inquiry.PreferredStyle" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Inquiry.Budget" class="control-label"></label>
+                <input asp-for="Inquiry.Budget" class="form-control" />
+                <span asp-validation-for="Inquiry.Budget" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Inquiry.Consent" /> @Html.DisplayNameFor(model => model.Inquiry.Consent)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="Inquiry.Date" class="control-label"></label>
+                <input asp-for="Inquiry.Date" class="form-control" />
+                <span asp-validation-for="Inquiry.Date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Inquiry.Status" class="control-label"></label>
+                <input asp-for="Inquiry.Status" class="form-control" />
+                <span asp-validation-for="Inquiry.Status" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Inquiry.CustomerId" class="control-label"></label>
+                <select asp-for="Inquiry.CustomerId" class="form-control" asp-items="ViewBag.CustomerId"></select>
+                <span asp-validation-for="Inquiry.CustomerId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

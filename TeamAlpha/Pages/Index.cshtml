@@ -1,10 +1,368 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "Home";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<!-- HERO -->
+<header id="home" class="hero">
+    <div class="container text-center">
+        <span class="badge rounded-pill px-3 py-2 mb-3">Sustainable • Minimal • Timeless</span>
+        <h1 class="mb-3">Design. Build. Inspire.</h1>
+        <p class="lead mx-auto mb-4 tagline">
+            We craft human-centered spaces that fuse form and function. From concept to construction, our team delivers end-to-end architectural solutions.
+        </p>
+        <div class="d-flex gap-3 justify-content-center">
+            <a href="#portfolio" class="btn btn-light">View Projects</a>
+            <a href="Inquiries/create" class="btn btn-outline-light">Get a Free Consultation</a>
+        </div>
+    </div>
+</header>
+
+<!-- VALUE PILLARS -->
+<section class="pillars py-5">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card p-4 h-100">
+                    <div class="d-flex align-items-center mb-2">
+                        <i class="bi bi-rulers me-2"></i>
+                        <h5 class="mb-0">Design Expertise</h5>
+                    </div>
+                    <p class="mb-0">Award-winning architects delivering bespoke, context-aware designs.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card p-4 h-100">
+                    <div class="d-flex align-items-center mb-2">
+                        <i class="bi bi-sliders me-2"></i>
+                        <h5 class="mb-0">Full Customization</h5>
+                    </div>
+                    <p class="mb-0">A configurable process tailored to scope, budget, and style.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card p-4 h-100">
+                    <div class="d-flex align-items-center mb-2">
+                        <i class="bi bi-recycle me-2"></i>
+                        <h5 class="mb-0">Sustainable Practices</h5>
+                    </div>
+                    <p class="mb-0">Materials and methods that minimize impact and maximize durability.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="py-5">
+    <div class="container">
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-6">
+                <h2 class="section-title mb-3">About Us</h2>
+                <p class="section-sub">
+                    We are an interdisciplinary studio blending architecture, interiors, and urban design. Our philosophy is simple: clarity of structure, honesty of materials, generosity of space.
+                </p>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><i class="bi bi-check-circle text-primary me-2"></i>20+ years of combined practice</li>
+                    <li class="mb-2"><i class="bi bi-check-circle text-primary me-2"></i>LEED-accredited professionals</li>
+                    <li class="mb-2"><i class="bi bi-check-circle text-primary me-2"></i>End-to-end delivery</li>
+                </ul>
+            </div>
+            <div class="col-lg-6">
+                <img class="img-fluid rounded" alt="Studio" src="https://images.unsplash.com/photo-1496307653780-42ee777d4833?q=80&w=1600&auto=format&fit=crop">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="py-5 bg-light">
+    <div class="container">
+        <div class="text-center mb-4">
+            <h2 class="section-title">Services</h2>
+            <p class="section-sub mx-auto">From residential concepts to complex commercial builds.</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+                <div class="p-4 service-card h-100 rounded">
+                    <i class="bi bi-house-door fs-3 text-primary"></i>
+                    <h5 class="mt-3">Residential Architecture</h5>
+                    <p>Contextual homes that elevate daily life.</p>
+                    <a href="#" class="link-primary">Learn more</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="p-4 service-card h-100 rounded">
+                    <i class="bi bi-buildings fs-3 text-primary"></i>
+                    <h5 class="mt-3">Commercial Projects</h5>
+                    <p>Scalable, brand-aligned spaces for business impact.</p>
+                    <a href="#" class="link-primary">Learn more</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="p-4 service-card h-100 rounded">
+                    <i class="bi bi-lamp fs-3 text-primary"></i>
+                    <h5 class="mt-3">Interior Design</h5>
+                    <p>Material palettes, lighting, and spatial flow.</p>
+                    <a href="#" class="link-primary">Learn more</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="p-4 service-card h-100 rounded">
+                    <i class="bi bi-tree fs-3 text-primary"></i>
+                    <h5 class="mt-3">Urban & Landscape</h5>
+                    <p>Human-scale public realms and resilient greenscapes.</p>
+                    <a href="#" class="link-primary">Learn more</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="p-4 service-card h-100 rounded">
+                    <i class="bi bi-arrow-repeat fs-3 text-primary"></i>
+                    <h5 class="mt-3">Renovations</h5>
+                    <p>Adaptive reuse and performance upgrades.</p>
+                    <a href="#" class="link-primary">Learn more</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="p-4 service-card h-100 rounded">
+                    <i class="bi bi-cpu fs-3 text-primary"></i>
+                    <h5 class="mt-3">3D/Visualization</h5>
+                    <p>Renders, walkthroughs, and BIM coordination.</p>
+                    <a href="#" class="link-primary">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section id="portfolio" class="py-5">
+    <div class="container">
+        <div class="text-center mb-4">
+            <h2 class="section-title">Projects</h2>
+            <p class="section-sub mx-auto">Filter by type to explore our work.</p>
+        </div>
+        <div class="text-center filter-btns mb-3">
+            <button class="btn btn-sm btn-dark" data-filter="*">All</button>
+            <button class="btn btn-sm btn-outline-dark" data-filter="residential">Residential</button>
+            <button class="btn btn-sm btn-outline-dark" data-filter="commercial">Commercial</button>
+            <button class="btn btn-sm btn-outline-dark" data-filter="interior">Interiors</button>
+            <button class="btn btn-sm btn-outline-dark" data-filter="concept">3D/Concepts</button>
+        </div>
+        <div class="portfolio-grid" id="portfolioGrid">
+            <!-- Each item: data-tags contains space-separated categories -->
+            <a href="#" class="portfolio-item" data-tags="residential">
+                <img alt="Project A" src="https://picsum.photos/seed/a1/800/600">
+                <div class="overlay">
+                    <div>
+                        <h6 class="mb-1">Hill House</h6>
+                        <small>Residential</small>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="portfolio-item" data-tags="commercial">
+                <img alt="Project B" src="https://picsum.photos/seed/a2/800/600">
+                <div class="overlay">
+                    <div>
+                        <h6 class="mb-1">Atrium HQ</h6>
+                        <small>Commercial</small>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="portfolio-item" data-tags="interior">
+                <img alt="Project C" src="https://picsum.photos/seed/a3/800/600">
+                <div class="overlay">
+                    <div>
+                        <h6 class="mb-1">Light Loft</h6>
+                        <small>Interior</small>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="portfolio-item" data-tags="concept">
+                <img alt="Project D" src="https://picsum.photos/seed/a4/800/600">
+                <div class="overlay">
+                    <div>
+                        <h6 class="mb-1">Timber Grid</h6>
+                        <small>3D Concept</small>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="portfolio-item" data-tags="commercial interior">
+                <img alt="Project E" src="https://picsum.photos/seed/a5/800/600">
+                <div class="overlay">
+                    <div>
+                        <h6 class="mb-1">Café Vitrine</h6>
+                        <small>Commercial • Interior</small>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="portfolio-item" data-tags="residential concept">
+                <img alt="Project F" src="https://picsum.photos/seed/a6/800/600">
+                <div class="overlay">
+                    <div>
+                        <h6 class="mb-1">Courtyard Core</h6>
+                        <small>Residential • 3D</small>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+
+<!-- BLOG -->
+<section id="blog" class="py-5 bg-light">
+    <div class="container">
+        <div class="text-center mb-4">
+            <h2 class="section-title">Insights</h2>
+            <p class="section-sub mx-auto">Trends, materials, sustainability, and project tips.</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <article class="blog-card rounded overflow-hidden">
+                    <img alt="Post 1" src="https://picsum.photos/seed/b1/800/450">
+                    <div class="p-3">
+                        <h5>Daylighting Strategies for Homes</h5>
+                        <p class="mb-2 text-secondary">Clerestories, light shelves, and glazing ratios.</p>
+                        <a class="link-primary" href="#">Read more</a>
+                    </div>
+                </article>
+            </div>
+            <div class="col-md-4">
+                <article class="blog-card rounded overflow-hidden">
+                    <img alt="Post 2" src="https://picsum.photos/seed/b2/800/450">
+                    <div class="p-3">
+                        <h5>Choosing Durable Materials</h5>
+                        <p class="mb-2 text-secondary">Stone, timber, recycled composites in context.</p>
+                        <a class="link-primary" href="#">Read more</a>
+                    </div>
+                </article>
+            </div>
+            <div class="col-md-4">
+                <article class="blog-card rounded overflow-hidden">
+                    <img alt="Post 3" src="https://picsum.photos/seed/b3/800/450">
+                    <div class="p-3">
+                        <h5>Net-Zero for Small Buildings</h5>
+                        <p class="mb-2 text-secondary">Envelope, HVAC, and PV sizing basics.</p>
+                        <a class="link-primary" href="#">Read more</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="py-5">
+    <div class="container">
+        <div class="row g-5">
+            <div class="col-lg-6">
+                <h2 class="section-title mb-3">Contact</h2>
+                <p class="section-sub max-w-70ch">Tell us about your site, timeline, and goals. We’ll respond within 1–2 business days.</p>
+                <form class="row g-3" onsubmit="event.preventDefault(); alert('Thanks! We will reach out shortly.'); this.reset();">
+                    <div class="col-md-6">
+                        <label class="form-label">Name</label>
+                        <input class="form-control" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Email</label>
+                        <input type="email" class="form-control" required>
+                    </div>
+                    <div class="col-12">
+                        <label class="form-label">Message</label>
+                        <textarea class="form-control" rows="4" required></textarea>
+                    </div>
+                    <div class="col-12">
+                        <button class="btn btn-dark" type="submit">Send Message</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-lg-6">
+                <div class="map-skeleton rounded"></div>
+                <div class="mt-3 small">
+                    <i class="bi bi-geo-alt"></i> 123 Studio Way, Cincinnati, OH &nbsp;•&nbsp;
+                    <i class="bi bi-telephone"></i> (555) 123-4567 &nbsp;•&nbsp;
+                    <i class="bi bi-envelope"></i> hello@teamalpha.com
+                </div>
+            </div>
+        </div>
+    </div>
+@section Scripts {
+<script>
+// ===== Portfolio Filter =====
+(function () {
+  const grid = document.getElementById('portfolioGrid');
+  const buttons = document.querySelectorAll('.filter-btns .btn');
+  if (!grid || !buttons.length) return;
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      buttons.forEach(b => b.classList.replace('btn-dark', 'btn-outline-dark'));
+      btn.classList.replace('btn-outline-dark', 'btn-dark');
+
+      const filter = btn.dataset.filter;
+      const items = grid.querySelectorAll('.portfolio-item');
+      items.forEach(it => {
+        const tags = it.getAttribute('data-tags') || '';
+        const hit = filter === '*' || tags.split(' ').includes(filter);
+        it.style.display = hit ? '' : 'none';
+      });
+    });
+  });
+})();
+
+// ===== Project Builder "estimate" preview =====
+(function () {
+  const form = document.getElementById('builderForm');
+  const out = document.getElementById('estimateContent');
+  if (!form || !out) return;
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const data = Object.fromEntries(new FormData(form).entries());
+    const size = Number(data.size || 0);
+    const floors = Number(data.floors || 1);
+
+    // Very rough scope wording (not a price quote)
+    const density = data.type === 'Commercial' ? 1.25 : data.type === 'Interior' ? 0.75 : 1.0;
+    const complexity = (data.style === 'Sustainable' ? 1.2 : data.style === 'Traditional' ? 1.05 : 1.0);
+    const programIndex = Math.round(size * floors * density * complexity);
+
+    out.innerHTML = `
+      <div class="d-flex align-items-start gap-3">
+        <i class="bi bi-clipboard2-check fs-4"></i>
+        <div>
+          <strong>Scope draft</strong><br/>
+          • Type: <em>${data.type}</em> • Size: <em>${size} sqft</em> • Floors: <em>${floors}</em><br/>
+          • Style: <em>${data.style}</em> • Budget: <em>${data.budget || '—'}</em><br/>
+          <span class="text-secondary">Program index: ${programIndex.toLocaleString()}</span>
+        </div>
+      </div>
+      <hr class="my-2">
+      <ul class="mb-0 small">
+        <li>Schematic layouts and massing study (2–3 options)</li>
+        <li>Material & daylight strategy aligned to <em>${data.style}</em></li>
+        <li>Permitting readiness checklist and next steps</li>
+      </ul>
+    `;
+  });
+})();
+
+// ===== Subtle reveal on scroll (reduced motion friendly) =====
+(function () {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const els = document.querySelectorAll('.reveal-on-scroll, .service-card, .portfolio-item, .blog-card');
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('reveal-in');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  els.forEach(el => io.observe(el));
+})();
+</script>
+}
+
+</section>

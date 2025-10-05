@@ -1,0 +1,96 @@
+﻿@page
+@model TeamAlpha.Pages.Projects.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Project[0].Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Project[0].Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Project[0].ProjectType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Project[0].AreaSize)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Project[0].Style)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Project[0].EstimatedBudget)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Project[0].Status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Project[0].StartDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Project[0].EndDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Project[0].Location)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Project[0].Customer)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Project) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProjectType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AreaSize)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Style)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EstimatedBudget)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StartDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EndDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Location)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Customer.Name)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.ProjectId">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.ProjectId">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ProjectId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

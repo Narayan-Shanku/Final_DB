@@ -33,6 +33,7 @@ namespace TeamAlpha.Pages.Inquiries
         {
             if (!ModelState.IsValid)
             {
+                ViewData["CustomerId"] = new SelectList(_context.Customer, "CustomerId", "Name");
                 return Page();
             }
 

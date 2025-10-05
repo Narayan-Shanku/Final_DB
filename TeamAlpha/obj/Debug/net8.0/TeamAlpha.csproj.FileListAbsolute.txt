@@ -269,3 +269,4 @@ C:\Users\shankunu\OneDrive - University of Cincinnati\Desktop\TeamAlpha\TeamAlph
 C:\Users\shankunu\OneDrive - University of Cincinnati\Desktop\TeamAlpha\TeamAlpha\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Drawing.Common.dll
 C:\Users\shankunu\OneDrive - University of Cincinnati\Desktop\TeamAlpha\TeamAlpha\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\shankunu\OneDrive - University of Cincinnati\Desktop\TeamAlpha\TeamAlpha\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
+C:\Users\shankunu\OneDrive - University of Cincinnati\Desktop\TeamAlpha\TeamAlpha\obj\Debug\net8.0\TeamAlpha.sourcelink.json
