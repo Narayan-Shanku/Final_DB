@@ -13,7 +13,7 @@ namespace TeamAlpha.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
     [Migration("20251005000938_scaffoldedallclasses")]
-    partial class scaffoldedallclasses
+    partial class Scaffoldedallclasses
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

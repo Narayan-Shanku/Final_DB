@@ -1,0 +1,334 @@
+﻿@page
+@model TeamAlpha.Pages.StatisticsDashboardModel
+@{
+    ViewData["Title"] = "Statistics Dashboard";
+    // Prepare data for Chart.js from the Model
+    var ongoingCount = Model.TotalProjectsCount - Model.CompletedProjectsCount;
+    var completedCount = Model.CompletedProjectsCount;
+
+    var phaseNames = Model.TopActivePhases.OrderByDescending(p => p.Progress).Take(5).Select(p => p.Name).ToList();
+    var phaseProgresses = Model.TopActivePhases.OrderByDescending(p => p.Progress).Take(5).Select(p => p.Progress).ToList();
+
+    // New data for the line chart
+    var monthlyStarts = Model.MonthlyProjectStarts;
+    var monthlyLabels = new List<string> { "Mar", "Apr", "May", "Jun", "Jul", "Aug" };
+    var trendChange = Model.ProjectTrendChange;
+    var trendColor = trendChange >= 0 ? "text-success" : "text-danger";
+    var trendIcon = trendChange >= 0 ? "fa-arrow-up" : "fa-arrow-down";
+}
+
+<!-- Load Font Awesome for Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+<!-- Load Chart.js Library -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
+
+<!-- Title and Subtitle -->
+<div class="container mt-4">
+    <h1 class="display-4 font-weight-bold text-dark">Construction Statistics Dashboard</h1>
+    <p class="lead text-muted mb-5">Real-time overview of current project loads and resources.</p>
+
+    <!-- 1. Key Metrics Cards Row -->
+    <div class="row g-4 mb-5">
+
+        <!-- Total Projects -->
+        <div class="col-lg-3 col-md-6">
+            <div class="card shadow-lg border-0 rounded-lg h-100 transition-shadow hover-lift">
+                <div class="card-body">
+                    <div class="d-flex align-items-center">
+                        <div class="icon-circle bg-primary text-white me-3 p-3 rounded-circle">
+                            <i class="fas fa-hammer fa-lg"></i>
+                        </div>
+                        <div>
+                            <p class="text-uppercase text-muted mb-0 small">Total Projects</p>
+                            <h2 class="font-weight-bold text-dark mb-1">@Model.TotalProjectsCount.ToString("N0")</h2>
+                            <span class="small @trendColor">
+                                <i class="fas @trendIcon me-1"></i> @trendChange.ToString("F1")% (vs last month)
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Completed Projects -->
+        <div class="col-lg-3 col-md-6">
+            <div class="card shadow-lg border-0 rounded-lg h-100 transition-shadow hover-lift">
+                <div class="card-body">
+                    <div class="d-flex align-items-center">
+                        <div class="icon-circle bg-success text-white me-3 p-3 rounded-circle">
+                            <i class="fas fa-check-circle fa-lg"></i>
+                        </div>
+                        <div>
+                            <p class="text-uppercase text-muted mb-0 small">Completed</p>
+                            <h2 class="font-weight-bold text-success mb-1">@Model.CompletedProjectsCount.ToString("N0")</h2>
+                            <span class="small text-success"><i class="fas fa-certificate me-1"></i> Excellent rate</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Total Customers -->
+        <div class="col-lg-3 col-md-6">
+            <div class="card shadow-lg border-0 rounded-lg h-100 transition-shadow hover-lift">
+                <div class="card-body">
+                    <div class="d-flex align-items-center">
+                        <div class="icon-circle bg-info text-white me-3 p-3 rounded-circle">
+                            <i class="fas fa-users fa-lg"></i>
+                        </div>
+                        <div>
+                            <p class="text-uppercase text-muted mb-0 small">Total Customers</p>
+                            <h2 class="font-weight-bold text-dark mb-1">@Model.TotalCustomersCount.ToString("N0")</h2>
+                            <span class="small text-success"><i class="fas fa-arrow-up me-1"></i> 2.1% (vs YTD)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- New Inquiries -->
+        <div class="col-lg-3 col-md-6">
+            <div class="card shadow-lg border-0 rounded-lg h-100 transition-shadow hover-lift">
+                <div class="card-body">
+                    <div class="d-flex align-items-center">
+                        <div class="icon-circle bg-warning text-white me-3 p-3 rounded-circle">
+                            <i class="fas fa-envelope fa-lg"></i>
+                        </div>
+                        <div>
+                            <p class="text-uppercase text-muted mb-0 small">New Inquiries</p>
+                            <h2 class="font-weight-bold text-warning mb-1">@Model.NewInquiriesCount.ToString("N0")</h2>
+                            <span class="small text-danger"><i class="fas fa-arrow-down me-1"></i> 10% (Action needed)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- End Key Metrics Cards Row -->
+    <!-- 2. Charts Row (Combined with old row 3) -->
+    <div class="row g-4 mb-5">
+
+        <!-- NEW: Monthly Project Starts (Line Chart) -->
+        <div class="col-lg-6">
+            <div class="card shadow-lg border-0 rounded-lg h-100">
+                <div class="card-header bg-white border-0 py-3">
+                    <h5 class="mb-0 text-dark font-weight-bold">Monthly Project Starts (Last 6 Months)</h5>
+                </div>
+                <div class="card-body">
+                    <canvas id="monthlyStartsChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project Status Doughnut Chart (Original Chart 1) -->
+        <div class="col-lg-6">
+            <div class="card shadow-lg border-0 rounded-lg h-100">
+                <div class="card-header bg-white border-0 py-3">
+                    <h5 class="mb-0 text-dark font-weight-bold">Overall Project Status Breakdown</h5>
+                </div>
+                <div class="card-body">
+                    <canvas id="projectStatusChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- End Charts Row -->
+    <!-- 3. Recent Projects and Active Phases (Original Row 2) -->
+    <div class="row g-4 mb-5">
+        <!-- Most Recent Projects -->
+        <div class="col-lg-6">
+            <div class="card shadow-lg border-0 rounded-lg h-100">
+                <div class="card-header bg-white border-0 py-3">
+                    <h5 class="mb-0 text-dark font-weight-bold">Most Recent Projects (@Model.MostRecentProjects.Count)</h5>
+                </div>
+                <div class="card-body p-0">
+                    @if (Model.MostRecentProjects.Any())
+                    {
+                        <ul class="list-group list-group-flush">
+                            @foreach (var project in Model.MostRecentProjects.Take(5))
+                            {
+                                <li class="list-group-item d-flex justify-content-between align-items-center hover-bg-light">
+                                    <div class="fw-bold">
+                                        @project.Title
+                                        <div class="text-muted small">@project.Location</div>
+                                    </div>
+                                    <span class="badge @(project.Status == "Completed" ? "bg-success" : project.Status == "Ongoing" ? "bg-primary" : "bg-warning") text-white rounded-pill p-2">
+                                        @project.Status
+                                    </span>
+                                </li>
+                            }
+                        </ul>
+                    }
+                    else
+                    {
+                        <div class="p-4 text-center text-muted">No project data available. Please add some projects to the database.</div>
+                    }
+                </div>
+            </div>
+        </div>
+
+        <!-- Top 5 Active Phases -->
+        <div class="col-lg-6">
+            <div class="card shadow-lg border-0 rounded-lg h-100">
+                <div class="card-header bg-white border-0 py-3">
+                    <h5 class="mb-0 text-dark font-weight-bold">Top Active Phases (By Progress)</h5>
+                </div>
+                <div class="card-body p-0">
+                    @if (Model.TopActivePhases.Any())
+                    {
+                        <ul class="list-group list-group-flush">
+                            @foreach (var phase in Model.TopActivePhases.OrderByDescending(p => p.Progress).Take(5))
+                            {
+                                <li class="list-group-item hover-bg-light">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="fw-bold">@phase.Name</div>
+                                        <span class="badge bg-secondary text-white rounded-pill">@phase.Progress%</span>
+                                    </div>
+                                    <small class="text-muted">Project ID: @phase.ProjectId</small>
+                                    <div class="progress mt-1" style="height: 5px;">
+                                        <div class="progress-bar bg-info" role="progressbar" style="width: @phase.Progress%" aria-valuenow="@phase.Progress" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </li>
+                            }
+                        </ul>
+                    }
+                    else
+                    {
+                        <div class="p-4 text-center text-muted">No active phases found.</div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Recent Projects and Active Phases -->
+    <!-- 4. Resource Summary -->
+    <div class="row g-4 mb-5">
+        <div class="col-12">
+            <div class="card shadow-lg border-0 rounded-lg">
+                <div class="card-body text-center py-4">
+                    <h4 class="mb-3 text-dark font-weight-bold">Contractor & Vendor Summary</h4>
+                    <p class="mb-1">Total Registered Contractors: <span class="fw-bold text-primary">@Model.TotalContractorsCount</span></p>
+                    <p class="mb-3">Total Registered Vendors: <span class="fw-bold text-info">@Model.TotalVendorsCount</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Resource Summary -->
+
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // --- CHART 1: Project Status Doughnut Chart ---
+        const projectStatusCtx = document.getElementById('projectStatusChart').getContext('2d');
+        // Ensure data is parsed correctly for JS
+        const completed = @completedCount;
+        const ongoing = @ongoingCount;
+
+        const projectStatusChart = new Chart(projectStatusCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Completed', 'Ongoing / Other'],
+                datasets: [{
+                    data: [completed, ongoing],
+                    backgroundColor: [
+                        '#10b981', // green-500 for Completed
+                        '#3b82f6'  // blue-500 for Ongoing
+                    ],
+                    hoverOffset: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                    },
+                    title: {
+                        display: true,
+                        text: 'Total Projects: @Model.TotalProjectsCount.ToString("N0")'
+                    }
+                }
+            }
+        });
+
+        // --- NEW CHART: Monthly Project Starts (Line Chart) ---
+        const monthlyStartsCtx = document.getElementById('monthlyStartsChart').getContext('2d');
+        const monthlyData = @Html.Raw(System.Text.Json.JsonSerializer.Serialize(monthlyStarts));
+        const monthlyLabels = @Html.Raw(System.Text.Json.JsonSerializer.Serialize(monthlyLabels));
+
+        const monthlyStartsChart = new Chart(monthlyStartsCtx, {
+            type: 'line',
+            data: {
+                labels: monthlyLabels,
+                datasets: [{
+                    label: 'New Projects Started',
+                    data: monthlyData,
+                    borderColor: 'rgb(255, 159, 64)', // Orange/Warning color
+                    backgroundColor: 'rgba(255, 159, 64, 0.2)',
+                    fill: true,
+                    tension: 0.4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Number of Projects'
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                }
+            }
+        });
+
+        // Set chart heights for consistency
+        document.querySelector('#projectStatusChart').style.height = '300px';
+        document.querySelector('#monthlyStartsChart').style.height = '300px';
+    }); // <-- FIX: Added missing closing parenthesis here
+</script>
+
+<style>
+    /* Custom CSS for visual appeal */
+    .transition-shadow {
+        transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+    }
+
+        .transition-shadow:hover {
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2) !important;
+        }
+
+    /* Added class for a lift effect on hover */
+    .hover-lift:hover {
+        transform: translateY(-5px);
+    }
+
+    /* Added class for list item hover effect */
+    .hover-bg-light:hover {
+        background-color: #f8f9fa; /* Bootstrap light gray */
+    }
+
+    .icon-circle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+        flex-shrink: 0;
+    }
+
+    .card-body h2 {
+        font-size: 1.8rem;
+    }
+</style>

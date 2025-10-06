@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace TeamAlpha.Data.Migrations
 {
     /// <inheritdoc />
-    public partial class scaffoldedallclasses : Migration
+    public partial class Scaffoldedallclasses : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
