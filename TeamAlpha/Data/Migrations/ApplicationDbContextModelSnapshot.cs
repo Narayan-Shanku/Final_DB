@@ -476,6 +476,33 @@ namespace TeamAlpha.Data.Migrations
                     b.ToTable("ProjectVendor");
                 });
 
+            modelBuilder.Entity("TeamAlpha.Models.Testimonial", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Comment")
+                        .HasMaxLength(300)
+                        .HasColumnType("nvarchar(300)");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Name")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<int>("Rating")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Testimonial");
+                });
+
             modelBuilder.Entity("TeamAlpha.Models.Vendor", b =>
                 {
                     b.Property<int>("VendorId")

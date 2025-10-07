@@ -47,6 +47,7 @@ namespace TeamAlpha.Data
         public DbSet<TeamAlpha.Models.Phase> Phase { get; set; } = default!;
         public DbSet<TeamAlpha.Models.Project> Project { get; set; } = default!;
         public DbSet<TeamAlpha.Models.Vendor> Vendor { get; set; } = default!;
+        public DbSet<TeamAlpha.Models.Testimonial> Testimonial { get; set; } = default!;
 
     }
 }
