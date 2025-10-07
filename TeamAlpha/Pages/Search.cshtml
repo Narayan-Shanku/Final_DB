@@ -1,0 +1,114 @@
+﻿@page
+@model TeamAlpha.Pages.SearchModel
+@{
+    ViewData["Title"] = "Search Projects";
+}
+
+<div class="container py-5">
+    <!-- HEADER -->
+    <div class="d-flex justify-content-between align-items-center mb-5">
+        <div>
+            <h1 class="fw-bold mb-1 text-primary">Search Projects</h1>
+            <p class="text-muted mb-0">Find projects by title, type, style, status, or location</p>
+        </div>
+    </div>
+
+    <!-- SEARCH FORM -->
+    <div class="card shadow-sm border-0 mb-4">
+        <div class="card-body p-4">
+            <form method="get" class="row g-3 align-items-center">
+                <div class="col-md-10">
+                    <div class="input-group input-group-lg">
+                        <span class="input-group-text bg-light border-0">
+                            <i class="bi bi-search text-muted"></i>
+                        </span>
+                        <input type="text"
+                               name="query"
+                               class="form-control border-0 shadow-none"
+                               placeholder="Search by title, type, style, status, or location..."
+                               value="@Model.Query" />
+                    </div>
+                </div>
+                <div class="col-md-2 d-grid">
+                    <button type="submit" class="btn btn-primary btn-lg rounded-pill shadow-sm">
+                        <i class="bi bi-arrow-right-circle me-1"></i> Search
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- RESULTS -->
+    @if (Model.Projects != null && Model.Projects.Any())
+    {
+        <div class="card shadow-sm border-0">
+            <div class="card-body p-4">
+                <div class="table-responsive">
+                    <table class="table table-hover align-middle">
+                        <thead class="table-light">
+                            <tr>
+                                <th>Title</th>
+                                <th>Type</th>
+                                <th>Style</th>
+                                <th>Status</th>
+                                <th>Location</th>
+                                <th>Start Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var project in Model.Projects)
+                            {
+                                <tr>
+                                    <td class="fw-semibold text-primary">@project.Title</td>
+                                    <td>@project.ProjectType</td>
+                                    <td>@project.Style</td>
+                                    <td>
+                                        <span class="badge bg-@(project.Status == "Completed" ? "success" : project.Status == "Ongoing" ? "warning" : "secondary")">
+                                            @project.Status
+                                        </span>
+                                    </td>
+                                    <td>@project.Location</td>
+                                    <td>@project.StartDate.ToShortDateString()</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    }
+    else if (!string.IsNullOrWhiteSpace(Model.Query))
+    {
+        <div class="alert alert-info shadow-sm mt-4">
+            <i class="bi bi-info-circle me-2"></i> No projects found for "<strong>@Model.Query</strong>".
+        </div>
+    }
+</div>
+
+<!-- PAGE STYLE -->
+<style>
+    body {
+        background: linear-gradient(rgba(11, 18, 32, 0.85), rgba(11, 18, 32, 0.85)), url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2000&auto=format&fit=crop');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        color: #0f172a;
+    }
+
+    h1, h2, h3, h4 {
+        letter-spacing: 0.5px;
+    }
+
+    .table-hover tbody tr:hover {
+        background-color: rgba(59, 130, 246, 0.05);
+        transition: 0.2s ease-in-out;
+    }
+
+    .input-group-text i {
+        font-size: 1.2rem;
+    }
+
+    .form-control::placeholder {
+        color: #9ca3af;
+    }
+</style>
