@@ -1,101 +1,171 @@
 ﻿@page
 @model TeamAlpha.Pages.Inquiries.CreateModel
-
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Create Inquiry";
 }
 
-<h1>Create</h1>
+<div class="container py-5">
+    <div class="text-center mb-5">
+        <h1 class="fw-bold display-6 text-primary">New Inquiry</h1>
+        <p class="lead text-muted">Let’s get started with your project. Please fill out the form below.</p>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-lg-8 col-md-10">
+            <div class="card shadow-lg border-0 rounded-4 p-4 p-md-5">
+                <form method="post" class="needs-validation" novalidate>
+                    <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
 
-<h4>Inquiry</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form method="post">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <span class="text-danger">*</span>
-                <label asp-for="Inquiry.Subject" class="control-label"></label>
-                <input asp-for="Inquiry.Subject" class="form-control" />
-                <span asp-validation-for="Inquiry.Subject" class="text-danger"></span>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label asp-for="Inquiry.Subject" class="form-label fw-semibold">
+                                Subject <span class="text-danger">*</span>
+                            </label>
+                            <input asp-for="Inquiry.Subject" class="form-control form-control-lg" placeholder="e.g., Residential Design" />
+                            <span asp-validation-for="Inquiry.Subject" class="text-danger small"></span>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label asp-for="Inquiry.Name" class="form-label fw-semibold">
+                                Name <span class="text-danger">*</span>
+                            </label>
+                            <input asp-for="Inquiry.Name" class="form-control form-control-lg" placeholder="Full Name" />
+                            <span asp-validation-for="Inquiry.Name" class="text-danger small"></span>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label asp-for="Inquiry.Email" class="form-label fw-semibold">Email</label>
+                            <input asp-for="Inquiry.Email" class="form-control form-control-lg" placeholder="name@email.com" />
+                            <span asp-validation-for="Inquiry.Email" class="text-danger small"></span>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label asp-for="Inquiry.Phone" class="form-label fw-semibold">Phone</label>
+                            <input asp-for="Inquiry.Phone" class="form-control form-control-lg" placeholder="+1 (234) 567-8901" />
+                            <span asp-validation-for="Inquiry.Phone" class="text-danger small"></span>
+                        </div>
+
+                        <div class="col-12">
+                            <label asp-for="Inquiry.Message" class="form-label fw-semibold">
+                                Message <span class="text-danger">*</span>
+                            </label>
+                            <textarea asp-for="Inquiry.Message" class="form-control form-control-lg" rows="4" placeholder="Describe your project in detail"></textarea>
+                            <span asp-validation-for="Inquiry.Message" class="text-danger small"></span>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label asp-for="Inquiry.CustomerType" class="form-label fw-semibold">Customer Type</label>
+                            <input asp-for="Inquiry.CustomerType" class="form-control form-control-lg" placeholder="e.g., Homeowner / Contractor" />
+                        </div>
+
+                        <div class="col-md-6">
+                            <label asp-for="Inquiry.ProjectType" class="form-label fw-semibold">Project Type</label>
+                            <input asp-for="Inquiry.ProjectType" class="form-control form-control-lg" placeholder="e.g., Residential / Commercial" />
+                        </div>
+
+                        <div class="col-md-4">
+                            <label asp-for="Inquiry.AreaSize" class="form-label fw-semibold">Area Size (sq ft)</label>
+                            <input asp-for="Inquiry.AreaSize" class="form-control form-control-lg" />
+                        </div>
+
+                        <div class="col-md-4">
+                            <label asp-for="Inquiry.PreferredStyle" class="form-label fw-semibold">Preferred Style</label>
+                            <input asp-for="Inquiry.PreferredStyle" class="form-control form-control-lg" placeholder="e.g., Modern, Minimal" />
+                        </div>
+
+                        <div class="col-md-4">
+                            <label asp-for="Inquiry.Budget" class="form-label fw-semibold">Budget ($)</label>
+                            <input asp-for="Inquiry.Budget" class="form-control form-control-lg" />
+                        </div>
+
+                        <div class="col-12 mt-3">
+                            <div class="form-check">
+                                <input class="form-check-input" asp-for="Inquiry.Consent" id="consentCheck" />
+                                <label class="form-check-label" for="consentCheck">
+                                    I consent to be contacted about my inquiry.
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label asp-for="Inquiry.Date" class="form-label fw-semibold">Date</label>
+                            <input asp-for="Inquiry.Date" class="form-control form-control-lg" />
+                        </div>
+
+                        <div class="col-md-6">
+                            <label asp-for="Inquiry.Status" class="form-label fw-semibold">Status</label>
+                            <input asp-for="Inquiry.Status" class="form-control form-control-lg" />
+                        </div>
+
+                        <div class="col-12">
+                            <label asp-for="Inquiry.CustomerId" class="form-label fw-semibold">Customer</label>
+                            <select asp-for="Inquiry.CustomerId" class="form-select form-select-lg" asp-items="ViewBag.CustomerId"></select>
+                        </div>
+                    </div>
+
+                    <div class="text-center mt-5">
+                        <button type="submit" class="btn btn-primary btn-lg px-5 shadow-sm">
+                            <i class="bi bi-send-fill me-2"></i>Create Inquiry
+                        </button>
+                        <a asp-page="Index" class="btn btn-outline-secondary btn-lg ms-3">Back to List</a>
+                    </div>
+                </form>
             </div>
-            <div class="form-group">
-                <span class="text-danger">*</span>
-                <label asp-for="Inquiry.Name" class="control-label"></label>
-                <input asp-for="Inquiry.Name" class="form-control" />
-                <span asp-validation-for="Inquiry.Name" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Inquiry.Email" class="control-label"></label>
-                <input asp-for="Inquiry.Email" class="form-control" />
-                <span asp-validation-for="Inquiry.Email" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Inquiry.Phone" class="control-label"></label>
-                <input asp-for="Inquiry.Phone" class="form-control" />
-                <span asp-validation-for="Inquiry.Phone" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <span class="text-danger">*</span>
-                <label asp-for="Inquiry.Message" class="control-label"></label>
-                <input asp-for="Inquiry.Message" class="form-control" />
-                <span asp-validation-for="Inquiry.Message" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Inquiry.CustomerType" class="control-label"></label>
-                <input asp-for="Inquiry.CustomerType" class="form-control" />
-                <span asp-validation-for="Inquiry.CustomerType" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Inquiry.ProjectType" class="control-label"></label>
-                <input asp-for="Inquiry.ProjectType" class="form-control" />
-                <span asp-validation-for="Inquiry.ProjectType" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Inquiry.AreaSize" class="control-label"></label>
-                <input asp-for="Inquiry.AreaSize" class="form-control" />
-                <span asp-validation-for="Inquiry.AreaSize" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Inquiry.PreferredStyle" class="control-label"></label>
-                <input asp-for="Inquiry.PreferredStyle" class="form-control" />
-                <span asp-validation-for="Inquiry.PreferredStyle" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Inquiry.Budget" class="control-label"></label>
-                <input asp-for="Inquiry.Budget" class="form-control" />
-                <span asp-validation-for="Inquiry.Budget" class="text-danger"></span>
-            </div>
-            <div class="form-group form-check">
-                <label class="form-check-label">
-                    <input class="form-check-input" asp-for="Inquiry.Consent" /> @Html.DisplayNameFor(model => model.Inquiry.Consent)
-                </label>
-            </div>
-            <div class="form-group">
-                <label asp-for="Inquiry.Date" class="control-label"></label>
-                <input asp-for="Inquiry.Date" class="form-control" />
-                <span asp-validation-for="Inquiry.Date" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Inquiry.Status" class="control-label"></label>
-                <input asp-for="Inquiry.Status" class="form-control" />
-                <span asp-validation-for="Inquiry.Status" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Inquiry.CustomerId" class="control-label"></label>
-                <select asp-for="Inquiry.CustomerId" class ="form-control" asp-items="ViewBag.CustomerId"></select>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
+        </div>
     </div>
 </div>
 
-<div>
-    <a asp-page="Index">Back to List</a>
-</div>
-
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }
+<style>
+    /* Inquiry Form Theme */
+body {
+    background: linear-gradient(135deg, #f8fafc, #eef1f5);
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 1.25rem;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+label.form-label {
+    color: #2b2d42;
+}
+
+input.form-control, select.form-select, textarea.form-control {
+    border-radius: 0.75rem;
+    border: 1px solid #dee2e6;
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 0.15rem rgba(13,110,253,0.25);
+}
+
+.btn-primary {
+    background: linear-gradient(90deg, #0d6efd, #5a8dee);
+    border: none;
+    border-radius: 50px;
+    transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(90deg, #0056d2, #0d6efd);
+}
+
+.btn-outline-secondary {
+    border-radius: 50px;
+}
+
+</style>

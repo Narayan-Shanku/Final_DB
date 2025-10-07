@@ -2,60 +2,86 @@
 @model TeamAlpha.Pages.Vendors.EditModel
 
 @{
-    ViewData["Title"] = "Edit";
+    ViewData["Title"] = "Edit Vendor";
 }
 
-<h1>Edit</h1>
+<div class="container py-5">
+    <!-- Header -->
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1 class="fw-bold text-primary mb-0">Edit Vendor</h1>
+        <a asp-page="./Index" class="btn btn-outline-secondary rounded-pill px-4 shadow-sm">
+            <i class="bi bi-arrow-left"></i> Back to List
+        </a>
+    </div>
 
-<h4>Vendor</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form method="post">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="Vendor.VendorId" />
-            <div class="form-group">
-                <span class="text-danger">*</span>
-                <label asp-for="Vendor.Name" class="control-label"></label>
-                <input asp-for="Vendor.Name" class="form-control" />
-                <span asp-validation-for="Vendor.Name" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Vendor.Email" class="control-label"></label>
-                <input asp-for="Vendor.Email" class="form-control" />
-                <span asp-validation-for="Vendor.Email" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Vendor.Phone" class="control-label"></label>
-                <input asp-for="Vendor.Phone" class="form-control" />
-                <span asp-validation-for="Vendor.Phone" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Vendor.ServiceType" class="control-label"></label>
-                <input asp-for="Vendor.ServiceType" class="form-control" />
-                <span asp-validation-for="Vendor.ServiceType" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Vendor.Location" class="control-label"></label>
-                <input asp-for="Vendor.Location" class="form-control" />
-                <span asp-validation-for="Vendor.Location" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Vendor.Rating" class="control-label"></label>
-                <input asp-for="Vendor.Rating" class="form-control" />
-                <span asp-validation-for="Vendor.Rating" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
-            </div>
-        </form>
+    <!-- Card Layout -->
+    <div class="card shadow-sm border-0">
+        <div class="card-body px-5 py-4">
+            <form method="post" class="needs-validation" novalidate>
+                <div asp-validation-summary="ModelOnly" class="alert alert-danger" role="alert"></div>
+
+                <input type="hidden" asp-for="Vendor.VendorId" />
+
+                <div class="row g-4">
+                    <!-- Name -->
+                    <div class="col-md-6">
+                        <label asp-for="Vendor.Name" class="form-label fw-semibold">Name <span class="text-danger">*</span></label>
+                        <input asp-for="Vendor.Name" class="form-control shadow-sm" placeholder="Enter vendor name" />
+                        <span asp-validation-for="Vendor.Name" class="text-danger"></span>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="col-md-6">
+                        <label asp-for="Vendor.Email" class="form-label fw-semibold">Email</label>
+                        <input asp-for="Vendor.Email" class="form-control shadow-sm" placeholder="example@domain.com" />
+                        <span asp-validation-for="Vendor.Email" class="text-danger"></span>
+                    </div>
+
+                    <!-- Phone -->
+                    <div class="col-md-6">
+                        <label asp-for="Vendor.Phone" class="form-label fw-semibold">Phone</label>
+                        <input asp-for="Vendor.Phone" class="form-control shadow-sm" placeholder="(123) 456-7890" />
+                        <span asp-validation-for="Vendor.Phone" class="text-danger"></span>
+                    </div>
+
+                    <!-- Service Type -->
+                    <div class="col-md-6">
+                        <label asp-for="Vendor.ServiceType" class="form-label fw-semibold">Service Type</label>
+                        <input asp-for="Vendor.ServiceType" class="form-control shadow-sm" placeholder="E.g., HVAC, Landscaping" />
+                        <span asp-validation-for="Vendor.ServiceType" class="text-danger"></span>
+                    </div>
+
+                    <!-- Location -->
+                    <div class="col-md-6">
+                        <label asp-for="Vendor.Location" class="form-label fw-semibold">Location</label>
+                        <input asp-for="Vendor.Location" class="form-control shadow-sm" placeholder="City or area" />
+                        <span asp-validation-for="Vendor.Location" class="text-danger"></span>
+                    </div>
+
+                    <!-- Rating -->
+                    <div class="col-md-6">
+                        <label asp-for="Vendor.Rating" class="form-label fw-semibold">Rating</label>
+                        <input asp-for="Vendor.Rating" class="form-control shadow-sm" placeholder="Rate from 1 to 5" />
+                        <span asp-validation-for="Vendor.Rating" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <!-- Actions -->
+                <div class="mt-5 d-flex gap-3">
+                    <button type="submit" class="btn btn-primary rounded-pill px-4 shadow-sm">
+                        <i class="bi bi-save"></i> Save Changes
+                    </button>
+                    <a asp-page="./Index" class="btn btn-outline-secondary rounded-pill px-4 shadow-sm">
+                        <i class="bi bi-x-circle"></i> Cancel
+                    </a>
+                </div>
+            </form>
+        </div>
     </div>
 </div>
 
-<div>
-    <a asp-page="./Index">Back to List</a>
-</div>
-
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }

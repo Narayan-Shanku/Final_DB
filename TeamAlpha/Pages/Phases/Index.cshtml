@@ -2,71 +2,81 @@
 @model TeamAlpha.Pages.Phases.IndexModel
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Phases";
 }
 
-<h1>Index</h1>
+<div class="container py-5">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1 class="fw-bold text-primary mb-0">Phases</h1>
+        <a asp-page="Create" class="btn btn-primary rounded-pill px-4 shadow-sm">
+            <i class="bi bi-plus-circle me-1"></i> New Phase
+        </a>
+    </div>
 
-<p>
-    <a asp-page="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Phase[0].Name)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Phase[0].Description)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Phase[0].StartDate)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Phase[0].EndDate)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Phase[0].Status)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Phase[0].Progress)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Phase[0].Project)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model.Phase) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Description)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.StartDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.EndDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Status)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Progress)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Project.Title)
-            </td>
-            <td>
-                <a asp-page="./Edit" asp-route-id="@item.PhaseId">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.PhaseId">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.PhaseId">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+    <div class="card shadow-sm border-0">
+        <div class="card-body p-0">
+            <div class="table-responsive">
+                <table class="table table-hover align-middle mb-0">
+                    <thead class="table-light">
+                        <tr class="text-secondary small text-uppercase">
+                            <th>@Html.DisplayNameFor(model => model.Phase[0].Name)</th>
+                            <th>@Html.DisplayNameFor(model => model.Phase[0].Description)</th>
+                            <th>@Html.DisplayNameFor(model => model.Phase[0].StartDate)</th>
+                            <th>@Html.DisplayNameFor(model => model.Phase[0].EndDate)</th>
+                            <th>@Html.DisplayNameFor(model => model.Phase[0].Status)</th>
+                            <th>@Html.DisplayNameFor(model => model.Phase[0].Progress)</th>
+                            <th>@Html.DisplayNameFor(model => model.Phase[0].Project)</th>
+                            <th class="text-center">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.Phase)
+                        {
+                            <tr>
+                                <td class="fw-semibold">@item.Name</td>
+                                <td class="text-truncate" style="max-width: 250px;">@item.Description</td>
+                                <td>@item.StartDate?.ToShortDateString()</td>
+                                <td>@item.EndDate?.ToShortDateString()</td>
+                                <td>
+                                    <span class="badge
+                                            @(item.Status == "Not Started" ? "bg-secondary" :
+                                                                                    item.Status == "In Progress" ? "bg-warning text-dark" :
+                                                                                    item.Status == "Completed" ? "bg-success" :
+                                                                                    "bg-info text-dark")">
+                                                                                                      @item.Status
+                                                                                                  </span>
+                                                                                              </td>
+                                                                                              <td>
+                                                                                                  <div class="progress" style="height: 8px;">
+                                                                                                      <div class="progress-bar
+                                                @(item.Progress < 40 ? "bg-danger" :
+                                                                                           item.Progress < 80 ? "bg-warning text-dark" :
+                                                                                           "bg-success")"
+                                         role="progressbar"
+                                         style="width:@item.Progress%">
+                                    </div>
+                                </div>
+                                <small class="text-muted">@item.Progress%</small>
+                            </td>
+                            <td>@item.Project?.Title</td>
+                            <td class="text-center">
+                                <div class="btn-group btn-group-sm" role="group">
+                                    <a asp-page="./Details" asp-route-id="@item.PhaseId" class="btn btn-outline-primary" title="View Details">
+                                        <i class="bi bi-eye"></i>
+                                    </a>
+                                    <a asp-page="./Edit" asp-route-id="@item.PhaseId" class="btn btn-outline-success" title="Edit Phase">
+                                        <i class="bi bi-pencil"></i>
+                                    </a>
+                                    <a asp-page="./Delete" asp-route-id="@item.PhaseId" class="btn btn-outline-danger" title="Delete Phase">
+                                        <i class="bi bi-trash"></i>
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                                                }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

@@ -2,54 +2,67 @@
 @model TeamAlpha.Pages.Customers.DetailsModel
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Customer Details";
 }
 
-<h1>Details</h1>
+<div class="container py-5">
+    <!-- Header -->
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1 class="fw-bold text-primary mb-0">Customer Details</h1>
+        <a asp-page="./Index" class="btn btn-outline-secondary rounded-pill px-4 shadow-sm">
+            <i class="bi bi-arrow-left"></i> Back to List
+        </a>
+    </div>
 
-<div>
-    <h4>Customer</h4>
-    <hr />
-    <dl class="row">
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Customer.Name)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Customer.Name)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Customer.Email)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Customer.Email)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Customer.Phone)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Customer.Phone)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Customer.Address)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Customer.Address)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Customer.Type)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Customer.Type)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Customer.RegistrationDate)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Customer.RegistrationDate)
-        </dd>
-    </dl>
-</div>
-<div>
-    <a asp-page="./Edit" asp-route-id="@Model.Customer.CustomerId">Edit</a> |
-    <a asp-page="./Index">Back to List</a>
+    <!-- Card Layout -->
+    <div class="card shadow-sm border-0">
+        <div class="card-body px-5 py-4">
+            <h4 class="mb-3 text-secondary fw-semibold">Customer Summary</h4>
+            <hr class="mb-4" />
+
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <p class="mb-1 fw-semibold text-muted">Name</p>
+                    <p class="fs-6">@Model.Customer.Name</p>
+                </div>
+                <div class="col-md-6">
+                    <p class="mb-1 fw-semibold text-muted">Email</p>
+                    <p class="fs-6">@Model.Customer.Email</p>
+                </div>
+                <div class="col-md-6">
+                    <p class="mb-1 fw-semibold text-muted">Phone</p>
+                    <p class="fs-6">@Model.Customer.Phone</p>
+                </div>
+                <div class="col-md-6">
+                    <p class="mb-1 fw-semibold text-muted">Address</p>
+                    <p class="fs-6">@Model.Customer.Address</p>
+                </div>
+                <div class="col-md-6">
+                    <p class="mb-1 fw-semibold text-muted">Type</p>
+                    <p class="fs-6">
+                        <span class="badge
+                            @(Model.Customer.Type == "Premium" ? "bg-success" :
+                                                            Model.Customer.Type == "Regular" ? "bg-primary" :
+                                                            Model.Customer.Type == "Guest" ? "bg-warning text-dark" : "bg-secondary")">
+                            @Model.Customer.Type
+                        </span>
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <p class="mb-1 fw-semibold text-muted">Registration Date</p>
+                    <p class="fs-6">@Model.Customer.RegistrationDate.ToShortDateString()</p>
+                </div>
+            </div>
+
+            <!-- Actions -->
+            <div class="mt-4 d-flex gap-3">
+                <a asp-page="./Edit" asp-route-id="@Model.Customer.CustomerId" class="btn btn-success rounded-pill px-4 shadow-sm">
+                    <i class="bi bi-pencil"></i> Edit
+                </a>
+                <a asp-page="./Index" class="btn btn-outline-secondary rounded-pill px-4 shadow-sm">
+                    <i class="bi bi-list"></i> Back to List
+                </a>
+            </div>
+        </div>
+    </div>
 </div>

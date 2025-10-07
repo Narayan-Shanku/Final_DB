@@ -2,54 +2,66 @@
 @model TeamAlpha.Pages.Vendors.DetailsModel
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Vendor Details";
 }
 
-<h1>Details</h1>
+<div class="container py-5">
+    <!-- Header -->
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1 class="fw-bold text-primary mb-0">Vendor Details</h1>
+        <a asp-page="./Index" class="btn btn-outline-secondary rounded-pill px-4 shadow-sm">
+            <i class="bi bi-arrow-left"></i> Back to List
+        </a>
+    </div>
 
-<div>
-    <h4>Vendor</h4>
-    <hr />
-    <dl class="row">
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Vendor.Name)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Vendor.Name)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Vendor.Email)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Vendor.Email)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Vendor.Phone)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Vendor.Phone)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Vendor.ServiceType)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Vendor.ServiceType)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Vendor.Location)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Vendor.Location)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Vendor.Rating)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Vendor.Rating)
-        </dd>
-    </dl>
-</div>
-<div>
-    <a asp-page="./Edit" asp-route-id="@Model.Vendor.VendorId">Edit</a> |
-    <a asp-page="./Index">Back to List</a>
+    <!-- Card Layout -->
+    <div class="card shadow-sm border-0">
+        <div class="card-body px-5 py-4">
+            <h4 class="mb-3 text-secondary fw-semibold">Vendor Summary</h4>
+            <hr class="mb-4" />
+
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <p class="mb-1 fw-semibold text-muted">Name</p>
+                    <p class="fs-6">@Model.Vendor.Name</p>
+                </div>
+                <div class="col-md-6">
+                    <p class="mb-1 fw-semibold text-muted">Email</p>
+                    <p class="fs-6">@Model.Vendor.Email</p>
+                </div>
+                <div class="col-md-6">
+                    <p class="mb-1 fw-semibold text-muted">Phone</p>
+                    <p class="fs-6">@Model.Vendor.Phone</p>
+                </div>
+                <div class="col-md-6">
+                    <p class="mb-1 fw-semibold text-muted">Service Type</p>
+                    <p class="fs-6">@Model.Vendor.ServiceType</p>
+                </div>
+                <div class="col-md-6">
+                    <p class="mb-1 fw-semibold text-muted">Location</p>
+                    <p class="fs-6">@Model.Vendor.Location</p>
+                </div>
+                <div class="col-md-6">
+                    <p class="mb-1 fw-semibold text-muted">Rating</p>
+                    <p class="fs-6">
+                        <span class="badge
+                            @(Model.Vendor.Rating >= 4.5 ? "bg-success" :
+                                                            Model.Vendor.Rating >= 3 ? "bg-warning text-dark" : "bg-danger")">
+                            @Model.Vendor.Rating
+                        </span>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Actions -->
+            <div class="mt-4 d-flex gap-3">
+                <a asp-page="./Edit" asp-route-id="@Model.Vendor.VendorId" class="btn btn-success rounded-pill px-4 shadow-sm">
+                    <i class="bi bi-pencil"></i> Edit
+                </a>
+                <a asp-page="./Index" class="btn btn-outline-secondary rounded-pill px-4 shadow-sm">
+                    <i class="bi bi-list"></i> Back to List
+                </a>
+            </div>
+        </div>
+    </div>
 </div>

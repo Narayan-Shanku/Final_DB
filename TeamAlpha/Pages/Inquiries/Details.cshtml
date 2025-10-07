@@ -2,102 +2,99 @@
 @model TeamAlpha.Pages.Inquiries.DetailsModel
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Inquiry Details";
 }
 
-<h1>Details</h1>
+<div class="container py-5">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1 class="fw-bold text-primary mb-0">Inquiry Details</h1>
+        <a asp-page="./Index" class="btn btn-outline-secondary rounded-pill px-4 shadow-sm">
+            <i class="bi bi-arrow-left"></i> Back to List
+        </a>
+    </div>
 
-<div>
-    <h4>Inquiry</h4>
-    <hr />
-    <dl class="row">
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Inquiry.Subject)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Inquiry.Subject)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Inquiry.Name)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Inquiry.Name)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Inquiry.Email)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Inquiry.Email)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Inquiry.Phone)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Inquiry.Phone)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Inquiry.Message)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Inquiry.Message)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Inquiry.CustomerType)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Inquiry.CustomerType)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Inquiry.ProjectType)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Inquiry.ProjectType)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Inquiry.AreaSize)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Inquiry.AreaSize)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Inquiry.PreferredStyle)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Inquiry.PreferredStyle)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Inquiry.Budget)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Inquiry.Budget)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Inquiry.Consent)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Inquiry.Consent)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Inquiry.Date)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Inquiry.Date)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Inquiry.Status)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Inquiry.Status)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Inquiry.Customer)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Inquiry.Customer.Name)
-        </dd>
-    </dl>
-</div>
-<div>
-    <a asp-page="./Edit" asp-route-id="@Model.Inquiry.InquiryId">Edit</a> |
-    <a asp-page="./Index">Back to List</a>
+    <div class="card shadow-sm border-0">
+        <div class="card-body px-5 py-4">
+            <h4 class="mb-3 text-secondary fw-semibold">Inquiry Summary</h4>
+            <hr class="mb-4" />
+
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <p class="mb-1 fw-semibold text-muted">Subject</p>
+                    <p class="fs-6">@Model.Inquiry.Subject</p>
+                </div>
+                <div class="col-md-6">
+                    <p class="mb-1 fw-semibold text-muted">Name</p>
+                    <p class="fs-6">@Model.Inquiry.Name</p>
+                </div>
+                <div class="col-md-6">
+                    <p class="mb-1 fw-semibold text-muted">Email</p>
+                    <p class="fs-6">@Model.Inquiry.Email</p>
+                </div>
+                <div class="col-md-6">
+                    <p class="mb-1 fw-semibold text-muted">Phone</p>
+                    <p class="fs-6">@Model.Inquiry.Phone</p>
+                </div>
+                <div class="col-12">
+                    <p class="mb-1 fw-semibold text-muted">Message</p>
+                    <p class="fs-6">@Model.Inquiry.Message</p>
+                </div>
+
+                <hr class="my-3" />
+
+                <div class="col-md-6">
+                    <p class="mb-1 fw-semibold text-muted">Customer Type</p>
+                    <p class="fs-6">@Model.Inquiry.CustomerType</p>
+                </div>
+                <div class="col-md-6">
+                    <p class="mb-1 fw-semibold text-muted">Project Type</p>
+                    <p class="fs-6">@Model.Inquiry.ProjectType</p>
+                </div>
+                <div class="col-md-6">
+                    <p class="mb-1 fw-semibold text-muted">Area Size</p>
+                    <p class="fs-6">@Model.Inquiry.AreaSize</p>
+                </div>
+                <div class="col-md-6">
+                    <p class="mb-1 fw-semibold text-muted">Preferred Style</p>
+                    <p class="fs-6">@Model.Inquiry.PreferredStyle</p>
+                </div>
+                <div class="col-md-6">
+                    <p class="mb-1 fw-semibold text-muted">Budget</p>
+                    <p class="fs-6">$@Model.Inquiry.Budget</p>
+                </div>
+                <div class="col-md-6">
+                    <p class="mb-1 fw-semibold text-muted">Consent</p>
+                    <p class="fs-6">@Model.Inquiry.Consent</p>
+                </div>
+                <div class="col-md-6">
+                    <p class="mb-1 fw-semibold text-muted">Date</p>
+                    <p class="fs-6">@Model.Inquiry.Date.ToShortDateString()</p>
+                </div>
+                <div class="col-md-6">
+                    <p class="mb-1 fw-semibold text-muted">Status</p>
+                    <p class="fs-6">
+                        <span class="badge
+                            @(Model.Inquiry.Status == "Pending" ? "bg-warning text-dark" :
+                                                            Model.Inquiry.Status == "Approved" ? "bg-success" :
+                                                            Model.Inquiry.Status == "Rejected" ? "bg-danger" : "bg-secondary")">
+                            @Model.Inquiry.Status
+                        </span>
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <p class="mb-1 fw-semibold text-muted">Customer</p>
+                    <p class="fs-6">@Model.Inquiry.Customer?.Name</p>
+                </div>
+            </div>
+
+            <div class="mt-4 d-flex gap-3">
+                <a asp-page="./Edit" asp-route-id="@Model.Inquiry.InquiryId" class="btn btn-success rounded-pill px-4 shadow-sm">
+                    <i class="bi bi-pencil"></i> Edit
+                </a>
+                <a asp-page="./Index" class="btn btn-outline-secondary rounded-pill px-4 shadow-sm">
+                    <i class="bi bi-list"></i> Back to List
+                </a>
+            </div>
+        </div>
+    </div>
 </div>

@@ -2,65 +2,122 @@
 @model TeamAlpha.Pages.Contractors.IndexModel
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Contractors";
 }
 
-<h1>Index</h1>
+<div class="container py-5">
+    <!-- HEADER -->
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1 class="fw-bold text-primary mb-0">Contractors</h1>
+        <a asp-page="Create" class="btn btn-primary rounded-pill px-4 shadow-sm">
+            <i class="bi bi-plus-circle me-1"></i> Add Contractor
+        </a>
+    </div>
 
-<p>
-    <a asp-page="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Contractor[0].Name)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Contractor[0].Email)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Contractor[0].Phone)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Contractor[0].Specialty)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Contractor[0].Company)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Contractor[0].ExperienceYears)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model.Contractor) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Email)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Phone)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Specialty)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Company)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ExperienceYears)
-            </td>
-            <td>
-                <a asp-page="./Edit" asp-route-id="@item.ContractorId">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.ContractorId">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.ContractorId">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+    <!-- CARD + TABLE -->
+    <div class="card shadow-sm border-0">
+        <div class="card-body p-0">
+            <div class="table-responsive">
+                <table class="table table-hover align-middle mb-0">
+                    <thead class="table-light">
+                        <tr class="text-secondary small text-uppercase">
+                            <th>@Html.DisplayNameFor(model => model.Contractor[0].Name)</th>
+                            <th>@Html.DisplayNameFor(model => model.Contractor[0].Email)</th>
+                            <th>@Html.DisplayNameFor(model => model.Contractor[0].Phone)</th>
+                            <th>@Html.DisplayNameFor(model => model.Contractor[0].Specialty)</th>
+                            <th>@Html.DisplayNameFor(model => model.Contractor[0].Company)</th>
+                            <th>@Html.DisplayNameFor(model => model.Contractor[0].ExperienceYears)</th>
+                            <th class="text-center">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (Model.Contractor == null || !Model.Contractor.Any())
+                        {
+                            <tr>
+                                <td colspan="7" class="text-center py-5">
+                                    <h6 class="text-muted mb-1">No contractors found</h6>
+                                    <p class="text-secondary small">
+                                        Start by <a asp-page="Create" class="text-primary fw-semibold">adding your first contractor</a>.
+                                    </p>
+                                </td>
+                            </tr>
+                        }
+                        else
+                        {
+                            @foreach (var item in Model.Contractor)
+                            {
+                                <tr>
+                                    <td class="fw-semibold">@item.Name</td>
+                                    <td>@item.Email</td>
+                                    <td>@item.Phone</td>
+                                    <td>@item.Specialty</td>
+                                    <td>@item.Company</td>
+                                    <td>@item.ExperienceYears years</td>
+                                    <td class="text-center">
+                                        <div class="btn-group btn-group-sm" role="group">
+                                            <a asp-page="./Details" asp-route-id="@item.ContractorId" class="btn btn-outline-primary rounded-pill">
+                                                <i class="bi bi-eye"></i>
+                                            </a>
+                                            <a asp-page="./Edit" asp-route-id="@item.ContractorId" class="btn btn-outline-success rounded-pill">
+                                                <i class="bi bi-pencil"></i>
+                                            </a>
+                                            <a asp-page="./Delete" asp-route-id="@item.ContractorId" class="btn btn-outline-danger rounded-pill">
+                                                <i class="bi bi-trash"></i>
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            }
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    /* ===== Consistent Card & Table Styles ===== */
+    .card.shadow-sm {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        border-radius: 0.75rem;
+    }
+
+    table th {
+        letter-spacing: 0.5px;
+    }
+
+    .table-hover tbody tr:hover {
+        background-color: rgba(13, 110, 253, 0.05);
+    }
+
+    .badge {
+        font-size: 0.75rem;
+    }
+
+    .btn-group .btn {
+        border-width: 1.5px;
+        transition: all 0.2s ease;
+    }
+
+        .btn-group .btn:hover {
+            transform: scale(1.05);
+        }
+
+    @@media (max-width: 767.98px) {
+        h1
+
+    {
+        font-size: 1.5rem;
+    }
+
+    .btn {
+        padding: 0.35rem 0.75rem;
+    }
+
+    .table th, .table td {
+        white-space: nowrap;
+    }
+
+    }
+</style>

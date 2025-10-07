@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TeamAlpha")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+eeaa622d2df4f692fbeaab7b9432af10ea4b4de3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ffddf78cbd5c175ffadcc1eb14dd443075a96708")]
 [assembly: System.Reflection.AssemblyProductAttribute("TeamAlpha")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TeamAlpha")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

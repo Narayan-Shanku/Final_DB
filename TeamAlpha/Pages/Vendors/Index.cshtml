@@ -2,65 +2,65 @@
 @model TeamAlpha.Pages.Vendors.IndexModel
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Vendors";
 }
 
-<h1>Index</h1>
+<div class="container py-5">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <div>
+            <h1 class="fw-bold text-primary mb-1">Vendors</h1>
+            <p class="text-muted mb-0">List of all registered vendors and their details</p>
+        </div>
+        <a asp-page="Create" class="btn btn-primary shadow-sm px-4">
+            <i class="bi bi-plus-circle me-1"></i> Create New
+        </a>
+    </div>
 
-<p>
-    <a asp-page="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Vendor[0].Name)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Vendor[0].Email)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Vendor[0].Phone)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Vendor[0].ServiceType)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Vendor[0].Location)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Vendor[0].Rating)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model.Vendor) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Email)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Phone)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ServiceType)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Location)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Rating)
-            </td>
-            <td>
-                <a asp-page="./Edit" asp-route-id="@item.VendorId">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.VendorId">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.VendorId">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+    <div class="card border-0 shadow-lg rounded-4">
+        <div class="card-body p-0">
+            <div class="table-responsive">
+                <table class="table align-middle table-hover mb-0">
+                    <thead class="table-light text-secondary">
+                        <tr>
+                            <th>@Html.DisplayNameFor(model => model.Vendor[0].Name)</th>
+                            <th>@Html.DisplayNameFor(model => model.Vendor[0].Email)</th>
+                            <th>@Html.DisplayNameFor(model => model.Vendor[0].Phone)</th>
+                            <th>@Html.DisplayNameFor(model => model.Vendor[0].ServiceType)</th>
+                            <th>@Html.DisplayNameFor(model => model.Vendor[0].Location)</th>
+                            <th>@Html.DisplayNameFor(model => model.Vendor[0].Rating)</th>
+                            <th class="text-center">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.Vendor)
+                        {
+                            <tr>
+                                <td class="fw-semibold">@item.Name</td>
+                                <td>@item.Email</td>
+                                <td>@item.Phone</td>
+                                <td>@item.ServiceType</td>
+                                <td>@item.Location</td>
+                                <td>
+                                    <span class="badge bg-success bg-opacity-10 text-success px-3 py-2">
+                                        <i class="bi bi-star-fill me-1"></i>@item.Rating
+                                    </span>
+                                </td>
+                                <td class="text-center">
+                                    <a asp-page="./Details" asp-route-id="@item.VendorId" class="btn btn-sm btn-outline-info me-1">
+                                        <i class="bi bi-eye"></i>
+                                    </a>
+                                    <a asp-page="./Edit" asp-route-id="@item.VendorId" class="btn btn-sm btn-outline-primary me-1">
+                                        <i class="bi bi-pencil-square"></i>
+                                    </a>
+                                    <a asp-page="./Delete" asp-route-id="@item.VendorId" class="btn btn-sm btn-outline-danger">
+                                        <i class="bi bi-trash"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

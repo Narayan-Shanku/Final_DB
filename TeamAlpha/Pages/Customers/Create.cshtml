@@ -2,59 +2,133 @@
 @model TeamAlpha.Pages.Customers.CreateModel
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Create Customer";
 }
 
-<h1>Create</h1>
+<div class="container py-5">
+    <!-- Header -->
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1 class="fw-bold text-primary mb-0">Add New Customer</h1>
+        <a asp-page="./Index" class="btn btn-outline-secondary rounded-pill px-4 shadow-sm">
+            <i class="bi bi-arrow-left"></i> Back to List
+        </a>
+    </div>
 
-<h4>Customer</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form method="post">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <span class="text-danger">*</span>
-                <label asp-for="Customer.Name" class="control-label"></label>
-                <input asp-for="Customer.Name" class="form-control" />
-                <span asp-validation-for="Customer.Name" class="text-danger"></span>
+    <!-- Card Layout -->
+    <div class="card shadow-lg border-0 rounded-4 p-4 p-md-5">
+        <form method="post" class="needs-validation" novalidate>
+            <div asp-validation-summary="ModelOnly" class="alert alert-danger mb-4" role="alert"></div>
+
+            <div class="row g-4">
+                <!-- Name -->
+                <div class="col-md-6">
+                    <label asp-for="Customer.Name" class="form-label fw-semibold">Full Name <span class="text-danger">*</span></label>
+                    <input asp-for="Customer.Name" class="form-control form-control-lg" placeholder="Enter customer name" />
+                    <span asp-validation-for="Customer.Name" class="text-danger small"></span>
+                </div>
+
+                <!-- Email -->
+                <div class="col-md-6">
+                    <label asp-for="Customer.Email" class="form-label fw-semibold">Email</label>
+                    <input asp-for="Customer.Email" type="email" class="form-control form-control-lg" placeholder="customer@example.com" />
+                    <span asp-validation-for="Customer.Email" class="text-danger small"></span>
+                </div>
+
+                <!-- Phone -->
+                <div class="col-md-6">
+                    <label asp-for="Customer.Phone" class="form-label fw-semibold">Phone Number</label>
+                    <input asp-for="Customer.Phone" class="form-control form-control-lg" placeholder="+1 (000) 000-0000" />
+                    <span asp-validation-for="Customer.Phone" class="text-danger small"></span>
+                </div>
+
+                <!-- Address -->
+                <div class="col-md-6">
+                    <label asp-for="Customer.Address" class="form-label fw-semibold">Address</label>
+                    <input asp-for="Customer.Address" class="form-control form-control-lg" placeholder="Street, City, State" />
+                    <span asp-validation-for="Customer.Address" class="text-danger small"></span>
+                </div>
+
+                <!-- Customer Type -->
+                <div class="col-md-6">
+                    <label asp-for="Customer.Type" class="form-label fw-semibold">Customer Type</label>
+                    <input asp-for="Customer.Type" class="form-control form-control-lg" placeholder="e.g., Individual, Business, Corporate" />
+                    <span asp-validation-for="Customer.Type" class="text-danger small"></span>
+                </div>
+
+                <!-- Registration Date -->
+                <div class="col-md-6">
+                    <label asp-for="Customer.RegistrationDate" class="form-label fw-semibold">Registration Date</label>
+                    <input asp-for="Customer.RegistrationDate" type="date" class="form-control form-control-lg" value="@DateTime.Today.ToString("yyyy-MM-dd")" readonly />
+                    <span asp-validation-for="Customer.RegistrationDate" class="text-danger small"></span>
+                </div>
             </div>
-            <div class="form-group">
-                <label asp-for="Customer.Email" class="control-label"></label>
-                <input asp-for="Customer.Email" class="form-control" />
-                <span asp-validation-for="Customer.Email" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Customer.Phone" class="control-label"></label>
-                <input asp-for="Customer.Phone" class="form-control" />
-                <span asp-validation-for="Customer.Phone" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Customer.Address" class="control-label"></label>
-                <input asp-for="Customer.Address" class="form-control" />
-                <span asp-validation-for="Customer.Address" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Customer.Type" class="control-label"></label>
-                <input asp-for="Customer.Type" class="form-control" placeholder="Enter customer type (e.g. Individual, Business, Corporate)" />
-                <span asp-validation-for="Customer.Type" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Customer.RegistrationDate" class="control-label"></label>
-                <input asp-for="Customer.RegistrationDate" class="form-control" value="@DateTime.Today.ToString("yyyy-MM-dd")" readonly />
-                <span asp-validation-for="Customer.RegistrationDate" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+
+            <!-- Buttons -->
+            <div class="text-center mt-5">
+                <button type="submit" class="btn btn-primary btn-lg px-5 shadow-sm rounded-pill">
+                    <i class="bi bi-person-plus me-2"></i>Create Customer
+                </button>
+                <a asp-page="./Index" class="btn btn-outline-secondary btn-lg ms-3 rounded-pill">
+                    <i class="bi bi-x-circle me-1"></i>Cancel
+                </a>
             </div>
         </form>
     </div>
 </div>
 
-<div>
-    <a asp-page="Index">Back to List</a>
-</div>
-
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }
+
+<!-- ✅ STYLE COPIED FROM ARCONE THEME (INQUIRY / PROJECT / CONTRACTOR / VENDOR) -->
+<style>
+    /* Unified ArcOne Form Theme */
+    body {
+        background: linear-gradient(135deg, #f8fafc, #eef1f5);
+    }
+
+    .card {
+        background: #ffffff;
+        border-radius: 1.25rem;
+        transition: all 0.3s ease;
+    }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+        }
+
+    label.form-label {
+        color: #2b2d42;
+    }
+
+    input.form-control, select.form-select, textarea.form-control {
+        border-radius: 0.75rem;
+        border: 1px solid #dee2e6;
+        padding: 0.8rem 1rem;
+        font-size: 1rem;
+        transition: border-color 0.3s, box-shadow 0.3s;
+    }
+
+    input:focus, select:focus, textarea:focus {
+        border-color: #0d6efd;
+        box-shadow: 0 0 0 0.15rem rgba(13,110,253,0.25);
+    }
+
+    .btn-primary {
+        background: linear-gradient(90deg, #0d6efd, #5a8dee);
+        border: none;
+        border-radius: 50px;
+        transition: background 0.3s ease;
+    }
+
+        .btn-primary:hover {
+            background: linear-gradient(90deg, #0056d2, #0d6efd);
+        }
+
+    .btn-outline-secondary {
+        border-radius: 50px;
+    }
+</style>

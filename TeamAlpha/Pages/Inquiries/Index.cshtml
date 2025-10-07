@@ -2,113 +2,73 @@
 @model TeamAlpha.Pages.Inquiries.IndexModel
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Inquiries";
 }
 
-<h1>Index</h1>
+<div class="container py-5">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1 class="fw-bold text-primary mb-0">Inquiries</h1>
+        <a asp-page="Create" class="btn btn-primary rounded-pill px-4 shadow-sm">
+            <i class="bi bi-plus-circle me-1"></i> New Inquiry
+        </a>
+    </div>
 
-<p>
-    <a asp-page="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Inquiry[0].Subject)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Inquiry[0].Name)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Inquiry[0].Email)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Inquiry[0].Phone)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Inquiry[0].Message)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Inquiry[0].CustomerType)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Inquiry[0].ProjectType)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Inquiry[0].AreaSize)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Inquiry[0].PreferredStyle)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Inquiry[0].Budget)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Inquiry[0].Consent)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Inquiry[0].Date)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Inquiry[0].Status)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Inquiry[0].Customer)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model.Inquiry) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Subject)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Email)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Phone)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Message)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CustomerType)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ProjectType)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.AreaSize)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PreferredStyle)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Budget)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Consent)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Date)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Status)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Customer.Name)
-            </td>
-            <td>
-                <a asp-page="./Edit" asp-route-id="@item.InquiryId">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.InquiryId">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.InquiryId">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+    <div class="card shadow-sm border-0">
+        <div class="card-body p-0">
+            <div class="table-responsive">
+                <table class="table table-hover align-middle mb-0">
+                    <thead class="table-light">
+                        <tr class="text-secondary small text-uppercase">
+                            <th>@Html.DisplayNameFor(model => model.Inquiry[0].Subject)</th>
+                            <th>@Html.DisplayNameFor(model => model.Inquiry[0].Name)</th>
+                            <th>@Html.DisplayNameFor(model => model.Inquiry[0].Email)</th>
+                            <th>@Html.DisplayNameFor(model => model.Inquiry[0].Phone)</th>
+                            <th>@Html.DisplayNameFor(model => model.Inquiry[0].ProjectType)</th>
+                            <th>@Html.DisplayNameFor(model => model.Inquiry[0].Budget)</th>
+                            <th>@Html.DisplayNameFor(model => model.Inquiry[0].Date)</th>
+                            <th>@Html.DisplayNameFor(model => model.Inquiry[0].Status)</th>
+                            <th>@Html.DisplayNameFor(model => model.Inquiry[0].Customer)</th>
+                            <th class="text-center">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.Inquiry)
+                        {
+                            <tr>
+                                <td class="fw-semibold">@item.Subject</td>
+                                <td>@item.Name</td>
+                                <td>@item.Email</td>
+                                <td>@item.Phone</td>
+                                <td>@item.ProjectType</td>
+                                <td>$@item.Budget</td>
+                                <td>@item.Date.ToShortDateString()</td>
+                                <td>
+                                    <span class="badge
+                                            @(item.Status == "Pending" ? "bg-warning text-dark" :
+                                                                                    item.Status == "Approved" ? "bg-success" :
+                                                                                    item.Status == "Rejected" ? "bg-danger" : "bg-secondary")">
+                                    @item.Status
+                                </span>
+                            </td>
+                            <td>@item.Customer?.Name</td>
+                            <td class="text-center">
+                                <div class="btn-group btn-group-sm" role="group">
+                                    <a asp-page="./Details" asp-route-id="@item.InquiryId" class="btn btn-outline-primary">
+                                        <i class="bi bi-eye"></i>
+                                    </a>
+                                    <a asp-page="./Edit" asp-route-id="@item.InquiryId" class="btn btn-outline-success">
+                                        <i class="bi bi-pencil"></i>
+                                    </a>
+                                    <a asp-page="./Delete" asp-route-id="@item.InquiryId" class="btn btn-outline-danger">
+                                        <i class="bi bi-trash"></i>
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                                                }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

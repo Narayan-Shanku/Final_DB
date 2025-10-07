@@ -3,6 +3,66 @@
   "WorkspaceRootPath": "C:\\Users\\shankunu\\OneDrive - University of Cincinnati\\Desktop\\TeamAlpha\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{70DFEE36-8F4A-4B3C-9ADE-0959D4A8253B}|TeamAlpha\\TeamAlpha.csproj|c:\\users\\shankunu\\onedrive - university of cincinnati\\desktop\\teamalpha\\teamalpha\\pages\\phases\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{70DFEE36-8F4A-4B3C-9ADE-0959D4A8253B}|TeamAlpha\\TeamAlpha.csproj|solutionrelative:teamalpha\\pages\\phases\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70DFEE36-8F4A-4B3C-9ADE-0959D4A8253B}|TeamAlpha\\TeamAlpha.csproj|c:\\users\\shankunu\\onedrive - university of cincinnati\\desktop\\teamalpha\\teamalpha\\pages\\customers\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{70DFEE36-8F4A-4B3C-9ADE-0959D4A8253B}|TeamAlpha\\TeamAlpha.csproj|solutionrelative:teamalpha\\pages\\customers\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70DFEE36-8F4A-4B3C-9ADE-0959D4A8253B}|TeamAlpha\\TeamAlpha.csproj|c:\\users\\shankunu\\onedrive - university of cincinnati\\desktop\\teamalpha\\teamalpha\\pages\\inquiries\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{70DFEE36-8F4A-4B3C-9ADE-0959D4A8253B}|TeamAlpha\\TeamAlpha.csproj|solutionrelative:teamalpha\\pages\\inquiries\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70DFEE36-8F4A-4B3C-9ADE-0959D4A8253B}|TeamAlpha\\TeamAlpha.csproj|c:\\users\\shankunu\\onedrive - university of cincinnati\\desktop\\teamalpha\\teamalpha\\pages\\contractors\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{70DFEE36-8F4A-4B3C-9ADE-0959D4A8253B}|TeamAlpha\\TeamAlpha.csproj|solutionrelative:teamalpha\\pages\\contractors\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70DFEE36-8F4A-4B3C-9ADE-0959D4A8253B}|TeamAlpha\\TeamAlpha.csproj|c:\\users\\shankunu\\onedrive - university of cincinnati\\desktop\\teamalpha\\teamalpha\\pages\\contractors\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{70DFEE36-8F4A-4B3C-9ADE-0959D4A8253B}|TeamAlpha\\TeamAlpha.csproj|solutionrelative:teamalpha\\pages\\contractors\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70DFEE36-8F4A-4B3C-9ADE-0959D4A8253B}|TeamAlpha\\TeamAlpha.csproj|c:\\users\\shankunu\\onedrive - university of cincinnati\\desktop\\teamalpha\\teamalpha\\pages\\contractors\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{70DFEE36-8F4A-4B3C-9ADE-0959D4A8253B}|TeamAlpha\\TeamAlpha.csproj|solutionrelative:teamalpha\\pages\\contractors\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70DFEE36-8F4A-4B3C-9ADE-0959D4A8253B}|TeamAlpha\\TeamAlpha.csproj|c:\\users\\shankunu\\onedrive - university of cincinnati\\desktop\\teamalpha\\teamalpha\\pages\\projects\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{70DFEE36-8F4A-4B3C-9ADE-0959D4A8253B}|TeamAlpha\\TeamAlpha.csproj|solutionrelative:teamalpha\\pages\\projects\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70DFEE36-8F4A-4B3C-9ADE-0959D4A8253B}|TeamAlpha\\TeamAlpha.csproj|c:\\users\\shankunu\\onedrive - university of cincinnati\\desktop\\teamalpha\\teamalpha\\pages\\projects\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{70DFEE36-8F4A-4B3C-9ADE-0959D4A8253B}|TeamAlpha\\TeamAlpha.csproj|solutionrelative:teamalpha\\pages\\projects\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70DFEE36-8F4A-4B3C-9ADE-0959D4A8253B}|TeamAlpha\\TeamAlpha.csproj|c:\\users\\shankunu\\onedrive - university of cincinnati\\desktop\\teamalpha\\teamalpha\\pages\\projects\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{70DFEE36-8F4A-4B3C-9ADE-0959D4A8253B}|TeamAlpha\\TeamAlpha.csproj|solutionrelative:teamalpha\\pages\\projects\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70DFEE36-8F4A-4B3C-9ADE-0959D4A8253B}|TeamAlpha\\TeamAlpha.csproj|c:\\users\\shankunu\\onedrive - university of cincinnati\\desktop\\teamalpha\\teamalpha\\pages\\projects\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{70DFEE36-8F4A-4B3C-9ADE-0959D4A8253B}|TeamAlpha\\TeamAlpha.csproj|solutionrelative:teamalpha\\pages\\projects\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70DFEE36-8F4A-4B3C-9ADE-0959D4A8253B}|TeamAlpha\\TeamAlpha.csproj|c:\\users\\shankunu\\onedrive - university of cincinnati\\desktop\\teamalpha\\teamalpha\\pages\\projects\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{70DFEE36-8F4A-4B3C-9ADE-0959D4A8253B}|TeamAlpha\\TeamAlpha.csproj|solutionrelative:teamalpha\\pages\\projects\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70DFEE36-8F4A-4B3C-9ADE-0959D4A8253B}|TeamAlpha\\TeamAlpha.csproj|c:\\users\\shankunu\\onedrive - university of cincinnati\\desktop\\teamalpha\\teamalpha\\pages\\inquiries\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{70DFEE36-8F4A-4B3C-9ADE-0959D4A8253B}|TeamAlpha\\TeamAlpha.csproj|solutionrelative:teamalpha\\pages\\inquiries\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70DFEE36-8F4A-4B3C-9ADE-0959D4A8253B}|TeamAlpha\\TeamAlpha.csproj|c:\\users\\shankunu\\onedrive - university of cincinnati\\desktop\\teamalpha\\teamalpha\\pages\\inquiries\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{70DFEE36-8F4A-4B3C-9ADE-0959D4A8253B}|TeamAlpha\\TeamAlpha.csproj|solutionrelative:teamalpha\\pages\\inquiries\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70DFEE36-8F4A-4B3C-9ADE-0959D4A8253B}|TeamAlpha\\TeamAlpha.csproj|c:\\users\\shankunu\\onedrive - university of cincinnati\\desktop\\teamalpha\\teamalpha\\pages\\inquiries\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{70DFEE36-8F4A-4B3C-9ADE-0959D4A8253B}|TeamAlpha\\TeamAlpha.csproj|solutionrelative:teamalpha\\pages\\inquiries\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70DFEE36-8F4A-4B3C-9ADE-0959D4A8253B}|TeamAlpha\\TeamAlpha.csproj|c:\\users\\shankunu\\onedrive - university of cincinnati\\desktop\\teamalpha\\teamalpha\\pages\\inquiries\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{70DFEE36-8F4A-4B3C-9ADE-0959D4A8253B}|TeamAlpha\\TeamAlpha.csproj|solutionrelative:teamalpha\\pages\\inquiries\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{70DFEE36-8F4A-4B3C-9ADE-0959D4A8253B}|TeamAlpha\\TeamAlpha.csproj|c:\\users\\shankunu\\onedrive - university of cincinnati\\desktop\\teamalpha\\teamalpha\\data\\migrations\\20251005172737_addtestimonials.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{70DFEE36-8F4A-4B3C-9ADE-0959D4A8253B}|TeamAlpha\\TeamAlpha.csproj|solutionrelative:teamalpha\\data\\migrations\\20251005172737_addtestimonials.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -31,6 +91,201 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\shankunu\\OneDrive - University of Cincinnati\\Desktop\\TeamAlpha\\TeamAlpha\\Pages\\Phases\\Index.cshtml",
+              "RelativeDocumentMoniker": "TeamAlpha\\Pages\\Phases\\Index.cshtml",
+              "ToolTip": "C:\\Users\\shankunu\\OneDrive - University of Cincinnati\\Desktop\\TeamAlpha\\TeamAlpha\\Pages\\Phases\\Index.cshtml",
+              "RelativeToolTip": "TeamAlpha\\Pages\\Phases\\Index.cshtml",
+              "ViewState": "AgIAABkAAAAAAAAAAAAlwCgAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-07T06:18:46.127Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\shankunu\\OneDrive - University of Cincinnati\\Desktop\\TeamAlpha\\TeamAlpha\\Pages\\Customers\\Index.cshtml",
+              "RelativeDocumentMoniker": "TeamAlpha\\Pages\\Customers\\Index.cshtml",
+              "ToolTip": "C:\\Users\\shankunu\\OneDrive - University of Cincinnati\\Desktop\\TeamAlpha\\TeamAlpha\\Pages\\Customers\\Index.cshtml",
+              "RelativeToolTip": "TeamAlpha\\Pages\\Customers\\Index.cshtml",
+              "ViewState": "AgIAACgAAAAAAAAAAAAUwEUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-07T06:17:30.297Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\shankunu\\OneDrive - University of Cincinnati\\Desktop\\TeamAlpha\\TeamAlpha\\Pages\\Contractors\\Details.cshtml",
+              "RelativeDocumentMoniker": "TeamAlpha\\Pages\\Contractors\\Details.cshtml",
+              "ToolTip": "C:\\Users\\shankunu\\OneDrive - University of Cincinnati\\Desktop\\TeamAlpha\\TeamAlpha\\Pages\\Contractors\\Details.cshtml",
+              "RelativeToolTip": "TeamAlpha\\Pages\\Contractors\\Details.cshtml",
+              "ViewState": "AgIAABYAAAAAAAAAAAAYwDMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-07T06:08:57.564Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\shankunu\\OneDrive - University of Cincinnati\\Desktop\\TeamAlpha\\TeamAlpha\\Pages\\Contractors\\Create.cshtml",
+              "RelativeDocumentMoniker": "TeamAlpha\\Pages\\Contractors\\Create.cshtml",
+              "ToolTip": "C:\\Users\\shankunu\\OneDrive - University of Cincinnati\\Desktop\\TeamAlpha\\TeamAlpha\\Pages\\Contractors\\Create.cshtml",
+              "RelativeToolTip": "TeamAlpha\\Pages\\Contractors\\Create.cshtml",
+              "ViewState": "AgIAADYAAAAAAAAAAAAUwFMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-07T06:06:42.823Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\shankunu\\OneDrive - University of Cincinnati\\Desktop\\TeamAlpha\\TeamAlpha\\Pages\\Projects\\Index.cshtml",
+              "RelativeDocumentMoniker": "TeamAlpha\\Pages\\Projects\\Index.cshtml",
+              "ToolTip": "C:\\Users\\shankunu\\OneDrive - University of Cincinnati\\Desktop\\TeamAlpha\\TeamAlpha\\Pages\\Projects\\Index.cshtml",
+              "RelativeToolTip": "TeamAlpha\\Pages\\Projects\\Index.cshtml",
+              "ViewState": "AgIAADMAAAAAAAAAAAAcwFAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-07T06:04:48.901Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\shankunu\\OneDrive - University of Cincinnati\\Desktop\\TeamAlpha\\TeamAlpha\\Pages\\Projects\\Edit.cshtml",
+              "RelativeDocumentMoniker": "TeamAlpha\\Pages\\Projects\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\shankunu\\OneDrive - University of Cincinnati\\Desktop\\TeamAlpha\\TeamAlpha\\Pages\\Projects\\Edit.cshtml",
+              "RelativeToolTip": "TeamAlpha\\Pages\\Projects\\Edit.cshtml",
+              "ViewState": "AgIAAGIAAAAAAAAAAAAUwH8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-07T06:03:59.518Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\shankunu\\OneDrive - University of Cincinnati\\Desktop\\TeamAlpha\\TeamAlpha\\Pages\\Projects\\Details.cshtml",
+              "RelativeDocumentMoniker": "TeamAlpha\\Pages\\Projects\\Details.cshtml",
+              "ToolTip": "C:\\Users\\shankunu\\OneDrive - University of Cincinnati\\Desktop\\TeamAlpha\\TeamAlpha\\Pages\\Projects\\Details.cshtml",
+              "RelativeToolTip": "TeamAlpha\\Pages\\Projects\\Details.cshtml",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAcwG4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-07T06:03:09.253Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\shankunu\\OneDrive - University of Cincinnati\\Desktop\\TeamAlpha\\TeamAlpha\\Pages\\Projects\\Delete.cshtml",
+              "RelativeDocumentMoniker": "TeamAlpha\\Pages\\Projects\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\shankunu\\OneDrive - University of Cincinnati\\Desktop\\TeamAlpha\\TeamAlpha\\Pages\\Projects\\Delete.cshtml",
+              "RelativeToolTip": "TeamAlpha\\Pages\\Projects\\Delete.cshtml",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAcwGQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-07T06:01:05.948Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\shankunu\\OneDrive - University of Cincinnati\\Desktop\\TeamAlpha\\TeamAlpha\\Pages\\Projects\\Create.cshtml",
+              "RelativeDocumentMoniker": "TeamAlpha\\Pages\\Projects\\Create.cshtml",
+              "ToolTip": "C:\\Users\\shankunu\\OneDrive - University of Cincinnati\\Desktop\\TeamAlpha\\TeamAlpha\\Pages\\Projects\\Create.cshtml",
+              "RelativeToolTip": "TeamAlpha\\Pages\\Projects\\Create.cshtml",
+              "ViewState": "AgIAAGEAAAAAAAAAAAAUwH4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-07T05:59:53.002Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\shankunu\\OneDrive - University of Cincinnati\\Desktop\\TeamAlpha\\TeamAlpha\\Pages\\Inquiries\\Delete.cshtml",
+              "RelativeDocumentMoniker": "TeamAlpha\\Pages\\Inquiries\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\shankunu\\OneDrive - University of Cincinnati\\Desktop\\TeamAlpha\\TeamAlpha\\Pages\\Inquiries\\Delete.cshtml",
+              "RelativeToolTip": "TeamAlpha\\Pages\\Inquiries\\Delete.cshtml",
+              "ViewState": "AgIAAFUAAAAAAAAAAAAcwHIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-07T05:57:51.175Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\shankunu\\OneDrive - University of Cincinnati\\Desktop\\TeamAlpha\\TeamAlpha\\Pages\\Inquiries\\Edit.cshtml",
+              "RelativeDocumentMoniker": "TeamAlpha\\Pages\\Inquiries\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\shankunu\\OneDrive - University of Cincinnati\\Desktop\\TeamAlpha\\TeamAlpha\\Pages\\Inquiries\\Edit.cshtml",
+              "RelativeToolTip": "TeamAlpha\\Pages\\Inquiries\\Edit.cshtml",
+              "ViewState": "AgIAAHUAAAAAAAAAAAAUwJIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-07T05:56:47.741Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\shankunu\\OneDrive - University of Cincinnati\\Desktop\\TeamAlpha\\TeamAlpha\\Pages\\Inquiries\\Index.cshtml",
+              "RelativeDocumentMoniker": "TeamAlpha\\Pages\\Inquiries\\Index.cshtml",
+              "ToolTip": "C:\\Users\\shankunu\\OneDrive - University of Cincinnati\\Desktop\\TeamAlpha\\TeamAlpha\\Pages\\Inquiries\\Index.cshtml",
+              "RelativeToolTip": "TeamAlpha\\Pages\\Inquiries\\Index.cshtml",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAUwEoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-07T05:44:44.692Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\shankunu\\OneDrive - University of Cincinnati\\Desktop\\TeamAlpha\\TeamAlpha\\Pages\\Contractors\\Delete.cshtml",
+              "RelativeDocumentMoniker": "TeamAlpha\\Pages\\Contractors\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\shankunu\\OneDrive - University of Cincinnati\\Desktop\\TeamAlpha\\TeamAlpha\\Pages\\Contractors\\Delete.cshtml",
+              "RelativeToolTip": "TeamAlpha\\Pages\\Contractors\\Delete.cshtml",
+              "ViewState": "AgIAADYAAAAAAAAAAAAUwFMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-07T06:07:46.559Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\shankunu\\OneDrive - University of Cincinnati\\Desktop\\TeamAlpha\\TeamAlpha\\Pages\\Inquiries\\Details.cshtml",
+              "RelativeDocumentMoniker": "TeamAlpha\\Pages\\Inquiries\\Details.cshtml",
+              "ToolTip": "C:\\Users\\shankunu\\OneDrive - University of Cincinnati\\Desktop\\TeamAlpha\\TeamAlpha\\Pages\\Inquiries\\Details.cshtml",
+              "RelativeToolTip": "TeamAlpha\\Pages\\Inquiries\\Details.cshtml",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAcwGQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-07T05:55:42.045Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\shankunu\\OneDrive - University of Cincinnati\\Desktop\\TeamAlpha\\TeamAlpha\\Pages\\Inquiries\\Create.cshtml",
+              "RelativeDocumentMoniker": "TeamAlpha\\Pages\\Inquiries\\Create.cshtml",
+              "ToolTip": "C:\\Users\\shankunu\\OneDrive - University of Cincinnati\\Desktop\\TeamAlpha\\TeamAlpha\\Pages\\Inquiries\\Create.cshtml",
+              "RelativeToolTip": "TeamAlpha\\Pages\\Inquiries\\Create.cshtml",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAUwKoAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-07T05:41:27.646Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
               "Title": "20251005172737_addtestimonials.Designer.cs",
               "DocumentMoniker": "C:\\Users\\shankunu\\OneDrive - University of Cincinnati\\Desktop\\TeamAlpha\\TeamAlpha\\Data\\Migrations\\20251005172737_addtestimonials.Designer.cs",
               "RelativeDocumentMoniker": "TeamAlpha\\Data\\Migrations\\20251005172737_addtestimonials.Designer.cs",
@@ -43,7 +298,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 16,
               "Title": "site.js",
               "DocumentMoniker": "C:\\Users\\shankunu\\OneDrive - University of Cincinnati\\Desktop\\TeamAlpha\\TeamAlpha\\wwwroot\\js\\site.js",
               "RelativeDocumentMoniker": "TeamAlpha\\wwwroot\\js\\site.js",
@@ -51,8 +306,7 @@
               "RelativeToolTip": "TeamAlpha\\wwwroot\\js\\site.js",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAJoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-10-06T20:40:56.977Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-06T20:40:56.977Z"
             }
           ]
         }

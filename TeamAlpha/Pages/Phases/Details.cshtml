@@ -2,60 +2,96 @@
 @model TeamAlpha.Pages.Phases.DetailsModel
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Phase Details";
 }
 
-<h1>Details</h1>
+<div class="container py-5">
+    <!-- Header -->
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1 class="fw-bold text-primary mb-0">Phase Details</h1>
+        <a asp-page="./Index" class="btn btn-outline-secondary rounded-pill px-4 shadow-sm">
+            <i class="bi bi-arrow-left"></i> Back to List
+        </a>
+    </div>
 
-<div>
-    <h4>Phase</h4>
-    <hr />
-    <dl class="row">
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Phase.Name)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Phase.Name)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Phase.Description)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Phase.Description)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Phase.StartDate)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Phase.StartDate)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Phase.EndDate)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Phase.EndDate)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Phase.Status)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Phase.Status)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Phase.Progress)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Phase.Progress)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Phase.Project)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Phase.Project.Title)
-        </dd>
-    </dl>
-</div>
-<div>
-    <a asp-page="./Edit" asp-route-id="@Model.Phase.PhaseId">Edit</a> |
-    <a asp-page="./Index">Back to List</a>
+    <!-- Card Layout -->
+    <div class="card shadow-sm border-0">
+        <div class="card-body px-5 py-4">
+            <h4 class="mb-3 text-secondary fw-semibold">Phase Summary</h4>
+            <hr class="mb-4" />
+
+            <div class="row g-3">
+                <!-- Name -->
+                <div class="col-md-6">
+                    <p class="mb-1 fw-semibold text-muted">Phase Name</p>
+                    <p class="fs-6">@Model.Phase.Name</p>
+                </div>
+
+                <!-- Description -->
+                <div class="col-md-6">
+                    <p class="mb-1 fw-semibold text-muted">Description</p>
+                    <p class="fs-6">@Model.Phase.Description</p>
+                </div>
+
+                <!-- Start Date -->
+                <div class="col-md-6">
+                    <p class="mb-1 fw-semibold text-muted">Start Date</p>
+                    <p class="fs-6">@Model.Phase.StartDate?.ToShortDateString()</p>
+                </div>
+
+                <!-- End Date -->
+                <div class="col-md-6">
+                    <p class="mb-1 fw-semibold text-muted">End Date</p>
+                    <p class="fs-6">@Model.Phase.EndDate?.ToShortDateString()</p>
+                </div>
+
+                <!-- Status -->
+                <div class="col-md-6">
+                    <p class="mb-1 fw-semibold text-muted">Status</p>
+                    <p class="fs-6">
+                        <span class="badge
+                            @(Model.Phase.Status == "Not Started" ? "bg-secondary" :
+                                                            Model.Phase.Status == "In Progress" ? "bg-warning text-dark" :
+                                                            Model.Phase.Status == "Completed" ? "bg-success" :
+                                                            Model.Phase.Status == "Delayed" ? "bg-danger" : "bg-info")">
+                            @Model.Phase.Status
+                        </span>
+                    </p>
+                </div>
+
+                <!-- Progress -->
+                <div class="col-md-6">
+                    <p class="mb-1 fw-semibold text-muted">Progress</p>
+                    <div class="progress" style="height: 20px;">
+                        <div class="progress-bar
+                            @(Model.Phase.Progress < 40 ? "bg-danger" :
+                                                           Model.Phase.Progress < 75 ? "bg-warning text-dark" :
+                                                           "bg-success")"
+                             role="progressbar"
+                             style="width: @Model.Phase.Progress%;"
+                             aria-valuenow="@Model.Phase.Progress"
+                             aria-valuemin="0" aria-valuemax="100">
+                            @Model.Phase.Progress%
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project -->
+                <div class="col-md-6">
+                    <p class="mb-1 fw-semibold text-muted">Project</p>
+                    <p class="fs-6">@Model.Phase.Project?.Title</p>
+                </div>
+            </div>
+
+            <!-- Actions -->
+            <div class="mt-4 d-flex gap-3">
+                <a asp-page="./Edit" asp-route-id="@Model.Phase.PhaseId" class="btn btn-success rounded-pill px-4 shadow-sm">
+                    <i class="bi bi-pencil"></i> Edit
+                </a>
+                <a asp-page="./Index" class="btn btn-outline-secondary rounded-pill px-4 shadow-sm">
+                    <i class="bi bi-list"></i> Back to List
+                </a>
+            </div>
+        </div>
+    </div>
 </div>
