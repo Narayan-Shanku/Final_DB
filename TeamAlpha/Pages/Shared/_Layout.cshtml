@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -22,6 +24,7 @@
 </head>
 
 <body class="d-flex flex-column min-vh-100">
+
     <!-- NAVBAR -->
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom shadow-sm">
@@ -39,21 +42,37 @@
                 <div id="mainNavbar" class="collapse navbar-collapse">
                     <ul class="navbar-nav ms-auto align-items-lg-center">
 
+                        <!-- COMMON LINKS (Visible to all) -->
                         <li class="nav-item"><a class="nav-link" asp-page="/Index">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" asp-page="/Inquiries/Index">Inquiries</a></li>
+                        
+                        
 
+                        <!-- ADMIN LINKS -->
                         @if (User.IsInRole("Admin"))
                         {
                             <li class="nav-item"><a class="nav-link" asp-page="/Projects/Index">Projects</a></li>
                             <li class="nav-item"><a class="nav-link" asp-page="/Contractors/Index">Contractors</a></li>
                             <li class="nav-item"><a class="nav-link" asp-page="/Vendors/Index">Vendors</a></li>
                             <li class="nav-item"><a class="nav-link" asp-page="/Customers/Index">Customers</a></li>
+                            <li class="nav-item"><a class="nav-link" asp-page="/Inquiries/Index">Inquiries</a></li>
                             <li class="nav-item"><a class="nav-link" asp-page="/Phases/Index">Phases</a></li>
+                            <li class="nav-item"><a class="nav-link" asp-page="/StatisticsDashboard">Statistics</a></li>
+                            <li class="nav-item"><a class="nav-link" asp-page="/Search">Search</a></li>
+                            <li class="nav-item"><a class="nav-link" asp-page="/Testimonials/Index">Testimonials</a></li>
+                            
+                        }
+
+                        <!-- REGULAR USER LINKS -->
+                        @if (User.IsInRole("User"))
+                        {
+                            <li class="nav-item"><a class="nav-link" asp-page="/Projects/Index">Projects</a></li>
+                        <li class="nav-item"><a class="nav-link" asp-page="/Search">Search</a></li>
+                        <li class="nav-item"><a class="nav-link" asp-page="/Testimonials/Index">Testimonials</a></li>
                         }
 
                         <li class="nav-item"><a class="nav-link" asp-page="/StatisticsDashboard">Statistics</a></li>
-                        <li class="nav-item"><a class="nav-link" asp-page="/Search">Search</a></li>
-                        <li class="nav-item"><a class="nav-link" asp-page="/testimonials/Index">Testimonials</a></li>
+                       
+                        
 
                         <!-- THEME TOGGLE -->
                         <li class="nav-item ms-lg-3">
@@ -65,7 +84,7 @@
                             </button>
                         </li>
 
-                        <!-- LOGIN PARTIAL -->
+                        <!-- LOGIN / LOGOUT PARTIAL -->
                         <li class="nav-item ms-lg-3">
                             <partial name="_LoginPartial" />
                         </li>
@@ -76,7 +95,7 @@
         </nav>
     </header>
 
-    <!-- MAIN -->
+    <!-- MAIN CONTENT -->
     <main role="main" class="flex-grow-1">
         <div class="container-fluid px-0">
             @RenderBody()
@@ -123,27 +142,25 @@
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 
     <script>
-        // Set current year in footer
+        // Footer Year
         document.addEventListener('DOMContentLoaded', () => {
             const y = document.getElementById('year');
             if (y) y.textContent = new Date().getFullYear();
         });
 
-        // Dark mode toggle (icon + persistence)
+        // Dark Mode Toggle with Persistence
         (() => {
             const body = document.body;
             const toggleBtn = document.getElementById('themeToggle');
             const icon = document.getElementById('themeIcon');
             if (!toggleBtn || !icon) return;
 
-            // Apply saved theme
             const saved = localStorage.getItem('theme');
             if (saved === 'dark') {
                 body.classList.add('dark-mode');
                 icon.classList.replace('bi-moon-fill', 'bi-sun-fill');
             }
 
-            // Toggle handler
             toggleBtn.addEventListener('click', () => {
                 const isDark = body.classList.toggle('dark-mode');
                 icon.classList.replace(

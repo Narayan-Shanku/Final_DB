@@ -33,6 +33,7 @@ namespace TeamAlpha.Pages.Phases
         {
             if (!ModelState.IsValid)
             {
+                ViewData["ProjectId"] = new SelectList(_context.Set<Project>(), "ProjectId", "Title");
                 return Page();
             }
 

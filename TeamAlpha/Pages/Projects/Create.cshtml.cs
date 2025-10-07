@@ -33,7 +33,9 @@ namespace TeamAlpha.Pages.Projects
         {
             if (!ModelState.IsValid)
             {
+                ViewData["CustomerId"] = new SelectList(_context.Customer, "CustomerId", "Name");
                 return Page();
+
             }
 
             _context.Project.Add(Project);
